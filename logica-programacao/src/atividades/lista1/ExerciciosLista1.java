@@ -2,13 +2,13 @@ package atividades.lista1;
 
 import java.util.Scanner;
 
-public class Exercicios {
-    public static Scanner scan = new Scanner(System.in);
-    public static final double PRECO_GASOLINA = 4.79;
-    public static final double PRECO_ALCOOL = 3.69;
+public class ExerciciosLista1 {
+    private static Scanner scan = new Scanner(System.in);
+    private static final double PRECO_GASOLINA = 4.79;
+    private static final double PRECO_ALCOOL = 3.69;
 
     public static void main(String[] args) {
-//        exercicio1();
+        exercicio1();
 //        exercicio2();
 //        exercicio3();
 //        exercicio4();
@@ -25,7 +25,7 @@ public class Exercicios {
 //        exercicio15();
     }
 
-    public static void exercicio1() {
+    private static void exercicio1() {
         System.out.println("Informe a base do retângulo: ");
         double base = scan.nextDouble();
         System.out.println("Informe a altura do retângulo: ");
@@ -33,7 +33,7 @@ public class Exercicios {
         System.out.println("A área do retângulo é: " + base * altura);
     }
 
-    public static void exercicio2() {
+    private static void exercicio2() {
         System.out.print("Informe a sua idade! \nAnos: ");
         int idadeAnos = scan.nextInt();
         System.out.print("Meses: ");
@@ -44,7 +44,7 @@ public class Exercicios {
         System.out.println("Você já viveu " + diasVividos + " dias!");
     }
 
-    public static void exercicio3() {
+    private static void exercicio3() {
         System.out.println("Informe o número total de eleitores: ");
         double eleitores = scan.nextInt();
         System.out.println("Informe o número de votos em branco: ");
@@ -61,7 +61,7 @@ public class Exercicios {
         System.out.println((votosValidos / eleitores) * 100);
     }
 
-    public static void exercicio4() {
+    private static void exercicio4() {
         System.out.println("Informe o salário fixo: ");
         double salarioFixo = scan.nextDouble();
         System.out.println("Informe o valor total de vendas efetuadas: ");
@@ -71,14 +71,14 @@ public class Exercicios {
         System.out.println("O salário final do vendedor é " + salarioFinal);
     }
 
-    public static void exercicio5() {
+    private static void exercicio5() {
         System.out.println("Informe a temperatura em Fahrenheit: ");
         double temperatura = scan.nextDouble();
         double celsius = ((temperatura - 32) / 9) * 5;
         System.out.println("O temperatura em Celsius é " + celsius);
     }
 
-    public static void exercicio6() {
+    private static void exercicio6() {
         System.out.println("Informe a primeira nota: ");
         double nota1 = scan.nextDouble();
         System.out.println("Informe a segunda nota: ");
@@ -89,7 +89,7 @@ public class Exercicios {
         System.out.println("A media final é: " + mediaFinal);
     }
 
-    public static void exercicio7() {
+    private static void exercicio7() {
         System.out.println("Informe a quantidade de maças: ");
         int quantidadeMacas = scan.nextInt();
         double preçoMaca;
@@ -104,7 +104,7 @@ public class Exercicios {
         System.out.println("O custo total das maças é de " + preçoMaca + " reais");
     }
 
-    public static void exercicio8() {
+    private static void exercicio8() {
         System.out.println("Informe a nota da primeira avaliação: ");
         double nota1 = scan.nextDouble();
         System.out.println("Informe a nota da segunda avaliação: ");
@@ -117,7 +117,7 @@ public class Exercicios {
         }
     }
 
-    public static void exercicio9() {
+    private static void exercicio9() {
         System.out.println("Informe o ano de seu nascimento: ");
         double anoNascimento = scan.nextDouble();
         System.out.println("Informe o ano atual: ");
@@ -130,7 +130,7 @@ public class Exercicios {
         }
     }
 
-    public static void exercicio10() {
+    private static void exercicio10() {
         System.out.println("Informe o número de horas trabalhadas no mês: ");
         double horasTrabalhadasMes = scan.nextDouble();
         System.out.println("Informe o salário por hora: ");
@@ -145,7 +145,7 @@ public class Exercicios {
         System.out.println("Salário total: " + salarioTotal);
     }
 
-    public static void exercicio11() {
+    private static void exercicio11() {
         System.out.println("Informe a quantidade atual em estoque: ");
         double quantidadeAtualEstoque = scan.nextDouble();
         System.out.println("Informe a quantidade máxima em estoque: ");
@@ -161,7 +161,7 @@ public class Exercicios {
         }
     }
 
-    public static void exercicio12() {
+    private static void exercicio12() {
         System.out.println("Informe o primeiro valor: ");
         double valor1 = scan.nextDouble();
         System.out.println("Informe o segundo valor: ");
@@ -178,7 +178,7 @@ public class Exercicios {
         }
     }
 
-    public static void exercicio13() {
+    private static void exercicio13() {
         System.out.println("Informe o tipo de combustível: \nA-Alcool\nG-Gasolina");
         String combustivel = scan.next();
         System.out.println("Informe a quantidade de litros: ");
@@ -205,7 +205,7 @@ public class Exercicios {
         System.out.println("O valor total a ser pago é " + valorTotal);
     }
 
-    public static void exercicio14() {
+    private static void exercicio14() {
         System.out.println("Informe o nome do produto: ");
         String nomeProduto = scan.next();
         System.out.println("Informe a quantidade adquirida: ");
@@ -227,7 +227,7 @@ public class Exercicios {
         System.out.println("O valor total com desconto é " + totalComDesconto);
     }
 
-    public static void exercicio15() {
+    private static void exercicio15() {
         System.out.println("Informe o ano de seu nascimento: ");
         int anoNascimento = scan.nextInt();
         System.out.println("Informe o ano de seu ingresso na empresa");
