@@ -7,23 +7,24 @@
 
 import java.util.Scanner;
 
-public class exercicio_13 {
+public class exercicio_01_13 {
     public static void main(String[] args) {
         Scanner scann = new Scanner(System.in);
 
-        // não consegui colocar as opções como A e G
-        System.out.println("Qual combustível será abastecido? (Digite '1' para Alcool, ou '2' para Gasolina)");
-        int opcaoComb = scann.nextInt();
+        System.out.println("Qual combustível será abastecido? (Digite 'A' para Alcool, ou 'G' para Gasolina)");
+        char opcaoComb = scann.next().charAt(0);
         System.out.println("Qual a quantidade de combustível (em litros) será abastecida?");
         int litros = scann.nextInt();
         double valorComb = 0;
 
             switch (opcaoComb) {
-                case 1:
+                case 'A':
+                case 'a':
                     valorComb = litros <= 20 ? (3.69 * 0.98) : (3.69 * 0.95);
                     break;
 
-                case 2:
+                case 'G':
+                case 'g':    
                     valorComb = litros <= 20 ? (4.79 * 0.97) : (4.79 * 0.94);
                     break;
 
