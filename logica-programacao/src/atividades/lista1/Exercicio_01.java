@@ -9,6 +9,7 @@ public class Exercicio_01 {
         Scanner scan = new Scanner(System.in);
 
         //Entrada de Dados
+        System.out.println("Programa para descobir área de um retângulo em m².");
         System.out.println("Informe o valor da base do retângulo em metros: ");
         int base = scan.nextInt();
         System.out.println("Informe o valor da altura do retângulo em metros: ");
