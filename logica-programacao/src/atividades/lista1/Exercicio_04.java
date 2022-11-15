@@ -9,6 +9,7 @@ public class Exercicio_04 {
         Scanner scan = new Scanner(System.in);
 
         // Entrada de Dados
+        System.out.println("Programa que informa salário final de um vendedor, com base no salário fixo e comissão.");
         System.out.println("Informe o valor do salário fixo do vendedor em reais: ");
         double salarioFixo = scan.nextDouble();
         System.out.println("Informe o valor total obtido pelo vendedor no mês em reais: ");
