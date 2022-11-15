@@ -1,5 +1,6 @@
 package atividades.lista1;
 
+import java.time.Year;
 import java.util.Scanner;
 
 public class Exercicio_09 {
@@ -14,7 +15,8 @@ public class Exercicio_09 {
         int anoDeNascimento = scan.nextInt();
 
         //Processamento de Dados
-        int idadeEmAnos = 2022 - anoDeNascimento;
+        int anoAtual = Year.now().getValue();
+        int idadeEmAnos = anoAtual - anoDeNascimento;
         String mensagem;
         if (idadeEmAnos < 16) {
             mensagem = "Não poderá votar este ano.";
