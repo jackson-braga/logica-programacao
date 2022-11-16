@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Exercicio14 {
+    public static void main(String[] args) {
+        String nome;
+        double quantidade;
+        double preco;
+        double total;
+        double desconto;
+        double totalcomdesconto;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o nome do produto");
+        nome = scan.next();
+        System.out.println("Por favor digite a quantidade de produtos adquirida");
+        quantidade = scan.nextDouble();
+        System.out.println("Por favor digite o preço do produto");
+        preco = scan.nextDouble();
+        total=quantidade*preco;
+        System.out.println("O valor total é de R$"+total);
+
+        if(quantidade<=5)
+            desconto = 0.02;
+        else
+            if(quantidade>5&&quantidade<=10)
+                desconto = 0.03;
+            else
+                desconto = 0.05;
+            desconto *= total;
+        System.out.printf("\nO valor do desconto é de R$" + "%.2f",desconto);
+        System.out.printf("\nO valor total é de R$" + "%.2f",(total-desconto));
+    }
+}
