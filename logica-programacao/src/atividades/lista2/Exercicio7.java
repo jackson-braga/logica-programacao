@@ -16,11 +16,9 @@ public class Exercicio7 {
         Scanner scann = new Scanner(System.in);
         System.out.print("Informe o ano: ");
         int ano = scann.nextInt();
-        if (ano <= 100 && ano % 4 == 0) {
-            System.out.println("É bissexto.");
-        } else if (ano >= 100 && ano % 100 == 0) {
-            System.out.println("É bissexto.");
-        } else if (ano >= 400 && ano % 400 == 0) {
+        if ((ano <= 100 && ano % 4 == 0)
+                || (ano >= 100 && ano < 400 && ano % 100 == 0)
+                || (ano >= 400 && ano % 400 == 0)) {
             System.out.println("É bissexto.");
         } else {
             System.out.println("Não é ano bissexto.");
