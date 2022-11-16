@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Exercicio4 {
+    public static void main(String[] args) {
+    double vendas;
+    double salario;
+    double total;
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Por favor digite o valor total das suas vendas");
+    vendas = scan.nextDouble();
+    System.out.println("Por favor digite seu salário");
+    salario = scan.nextDouble();
+    total = vendas*0.05 + salario;
+        System.out.printf("\nSeu salário total esse mês é de R$"+ "%.2f",total);
+}
+}
