@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Exercicio4 {
+    public static void main(String[] args) {
+        double angulo1;
+        double angulo2;
+        double angulo3;
+        int teste = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o primeiro ângulo do triângulo");
+        angulo1 = scan.nextDouble();
+        System.out.println("Por favor digite o segundo ângulo do triângulo");
+        angulo2 = scan.nextDouble();
+        System.out.println("Por favor digite o terceiro ângulo do triângulo");
+        angulo3 = scan.nextDouble();
+        if (angulo1+angulo2+angulo3!=180){
+            System.out.println("Não é um triangulo");
+            return;
+        }
+        if(angulo1==90)
+            teste=1;
+        if(angulo2==90)
+            teste=1;
+        if(angulo3==90)
+            teste=1;
+        if(angulo1>90)
+            teste=2;
+        if(angulo2>90)
+            teste=2;
+        if(angulo3>90)
+            teste=2;
+        if (teste == 1)
+            System.out.println("O triângulo é retângulo");
+        else if (teste == 2)
+            System.out.println("O triângulo é obtusângulo");
+        else
+            System.out.println("O triângulo é acutângulo");
+    }
+}
