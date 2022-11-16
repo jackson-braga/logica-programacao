@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        int lados;
+        double tamanho;
+        double area;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o número de lados do polígono regular");
+        lados = scan.nextInt();
+        System.out.println("Por favor digite a medida do lados em cm do polígono regular");
+        tamanho = scan.nextDouble();
+        if (lados < 3)
+            System.out.println("Não é um polígono");
+        else if (lados > 5)
+            System.out.println("Polígono não encontrado");
+        else if (lados == 3) {
+            area = tamanho * tamanho * 0.43301;
+            System.out.println("É um triângulo e sua área é de " + area + " cm²");
+        } else if (lados == 4) {
+            area = tamanho * tamanho;
+            System.out.println("É um quadrado e sua área é de " + area + " cm²");
+        } else if (lados == 5) {
+            System.out.println("É um pentágono");
+        }
+    }
+}
