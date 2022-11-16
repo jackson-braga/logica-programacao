@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        double brancos;
+        double eleitores;
+        double nulos;
+        double validos;
+        double p_brancos;
+        double p_nulos;
+        double p_validos;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o número total de eleitores");
+        eleitores = scan.nextDouble();
+        System.out.println("Por favor digite o número total de votos em branco");
+        brancos = scan.nextDouble();
+        System.out.println("Por favor digite o número total de votos nulos");
+        nulos = scan.nextDouble();
+        System.out.println("Por favor digite o número total de votos válidos");
+        validos = scan.nextDouble();
+        p_brancos = brancos / eleitores * 100;
+        p_nulos = nulos / eleitores * 100;
+        p_validos = validos / eleitores * 100;
+        System.out.printf("\nTotal de eleitores " +"%.0f",eleitores);
+        System.out.printf("\nTotal de votos válidos "+ "%.0f",validos);
+        System.out.println("\nRepresentando " + p_validos + "%");
+        System.out.printf("Total de votos em branco "+ "%.0f",brancos);
+        System.out.println("\nRepresentando " + p_brancos + "%");
+        System.out.printf("Total de votos nulos "+ "%.0f",nulos );
+        System.out.println("\nRepresentando " + p_nulos + "%");
+    }
+}
