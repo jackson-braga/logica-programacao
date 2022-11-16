@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Exercicio11 {
+    public static void main(String[] args) {
+        double atual;
+        double minimo;
+        double maximo;
+        double media;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o estoque atual");
+        atual = scan.nextDouble();
+        System.out.println("Por favor digite o estoque maximo");
+        maximo = scan.nextDouble();
+        System.out.println("Por favor digite o estoque minimo");
+        minimo = scan.nextDouble();
+        media = (maximo+minimo)/2;
+        System.out.println("O estoque médio é de "+media);
+        if(atual<media)
+            System.out.printf("Efetuar compra");
+        else
+            System.out.printf("Não efetuar compra");
+    }
+}
