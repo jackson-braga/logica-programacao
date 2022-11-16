@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        double lado1;
+        double lado2;
+        double lado3;
+        int teste = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o primeiro lado do triângulo");
+        lado1 = scan.nextDouble();
+        System.out.println("Por favor digite o segundo lado do triângulo");
+        lado2 = scan.nextDouble();
+        System.out.println("Por favor digite o terceiro lado do triângulo");
+        lado3 = scan.nextDouble();
+        if(lado1==lado2)
+            teste++;
+        if(lado3==lado2)
+            teste++;
+        if(lado1==lado3)
+            teste++;
+        if (teste == 1)
+            System.out.println("O triângulo é isósceles");
+        else if (teste == 3)
+            System.out.println("O triângulo é equilátero");
+        else
+            System.out.println("O triângulo é escaleno");
+        }
+    }
