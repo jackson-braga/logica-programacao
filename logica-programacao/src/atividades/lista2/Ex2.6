@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Exercicio6 {
+    public static void main(String[] args) {
+        double nota1;
+        double nota2;
+        double notafinal;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite a nota da primeira parcial");
+        nota1 = scan.nextDouble();
+        System.out.println("Por favor digite a nota da segunda parcial");
+        nota2 = scan.nextDouble();
+        notafinal = (nota1+nota2)/2;
+        System.out.printf("A sua primeira nota foi " + "%.2f",nota1);
+        System.out.printf("\nA sua segunda nota foi " + "%.2f",nota2);
+        System.out.printf("\nA sua média final foi " + "%.2f",notafinal);
+        if(notafinal<4)
+            System.out.println("\nSeu conceito é E");
+        if(notafinal>=4&&notafinal<6)
+            System.out.println("\nSeu conceito é D");
+        if(notafinal>=6&&notafinal<7.5)
+            System.out.println("\nSeu conceito é C");
+        if(notafinal>=7.5&&notafinal<9)
+            System.out.println("\nSeu conceito é B");
+        if(notafinal>=9)
+            System.out.println("\nSeu conceito é A");
+
+        if(notafinal<6)
+            System.out.println("Você foi reprovado!");
+        else
+            System.out.println("Você foi aprovado!");
+    }
+}
