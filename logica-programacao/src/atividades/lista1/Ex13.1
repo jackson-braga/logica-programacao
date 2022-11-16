@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Exercicio13 {
+    public static void main(String[] args) {
+        String combustivel =" ";
+        double litros;
+        double custo = 0;
+        double alcool = 3.69;
+        double gasolina = 4.79;
+        Scanner scan = new Scanner(System.in);
+        do {
+            System.out.println("Por favor digite A para álcool ou G para gasolina");
+            combustivel = scan.next();
+            if(!combustivel.equals("a")&&!combustivel.equals("g")&&!combustivel.equals("A")&&!combustivel.equals("G"))
+                System.out.println("Opção inválida");
+        }while(!combustivel.equals("a")&&!combustivel.equals("g")&&!combustivel.equals("A")&&!combustivel.equals("G"));
+        System.out.println("Por favor digite a quantidade de litros abastecida");
+        litros = scan.nextDouble();
+        if(combustivel.equals("A") ||combustivel.equals("a")){
+            if(litros<20)
+         custo = litros*alcool*0.98;
+            else
+                custo = litros*alcool*0.95;
+        }
+        if(combustivel.equals("G") ||combustivel.equals("g")){
+            if(litros<20)
+                custo = litros*gasolina*0.97;
+            else
+                custo = litros*gasolina*0.94;
+        }
+         System.out.printf("\nO valor total é de R$" + "%.2f",custo);
