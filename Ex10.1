@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercicio10 {
+    public static void main(String[] args) {
+        double salario;
+        double horas;
+        double salariofinal;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite as horas trabalhadas esse mês");
+        horas = scan.nextDouble();
+        System.out.println("Por favor digite o seu salário por hora");
+        salario = scan.nextDouble();
+        if(horas>160)
+            salariofinal = (160*salario)+(horas-160)*salario*1.5;
+        else
+            salariofinal = horas*salario;
+            System.out.printf("Seu salario esse mês é de R$" + "%.2f",salariofinal);
+    }
+}
