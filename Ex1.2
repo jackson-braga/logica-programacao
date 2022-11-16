@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+    public class Exercicio2 {
+        public static void main(String[] args) {
+            int anos;
+            int meses;
+            int dias;
+            int total;
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Por favor digite sua idade em anos, meses e dias");
+            System.out.println("Por favor digite os anos");
+            anos = scan.nextInt();
+            System.out.println("Por favor digite os meses");
+            meses = scan.nextInt();
+            System.out.println("Por favor digite os dias");
+            dias = scan.nextInt();
+            total = anos*365+meses*30+dias;
+            System.out.println("Você viveu "+ total + " dias");
+        }
+    }
