@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Exercicio15 {
+    public static void main(String[] args) {
+        int anoingresso;
+        int anoatual;
+        int nascimento;
+        int idade;
+        int anostrabalhados;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o ano atual");
+        anoatual = scan.nextInt();
+        System.out.println("Por favor digite o ano de ingresso na empresa");
+        anoingresso = scan.nextInt();
+        System.out.println("Por favor digite o ano de nascimento");
+        nascimento = scan.nextInt();
+        idade = anoatual - nascimento;
+        anostrabalhados = anoatual - anoingresso;
+        System.out.println("Você tem "+idade+" anos e trabalhou "+anostrabalhados+" anos");
+if(idade>=65||anostrabalhados>=35||(idade>=60&&anostrabalhados>=30))
+        System.out.println("Requerer aposentadoria");
+else
+        System.out.println("Não requerer aposentadoria");
+    }
+}
