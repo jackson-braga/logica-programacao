@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Exercicio5 {
+    public static void main(String[] args) {
+        double temperaturaf;
+        double temperaturac;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite a temperatura em Fahrenheit (°F)");
+        temperaturaf = scan.nextDouble();
+        temperaturac = (temperaturaf-32)*5/9;
+        System.out.printf("A temperatura é de "+ "%.2f",temperaturac);
+        System.out.println("°C");
+    }
+}
