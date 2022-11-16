@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q1 {
+public class Q2 {
 
     public static void main(String[] args) throws Exception {
 
