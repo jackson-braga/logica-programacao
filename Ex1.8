@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Exercicio8 {
+    public static void main(String[] args) {
+        double nota1;
+        double nota2;
+        double notafinal;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite a nota da primeira prova");
+        nota1 = scan.nextDouble();
+        System.out.println("Por favor digite a nota da segunda prova");
+        nota2 = scan.nextDouble();
+        notafinal = (nota1+nota2)/2;
+        System.out.printf("A sua média final foi " + "%.2f",notafinal);
+        if(notafinal<6)
+            System.out.println("\nVocê foi reprovado!");
+        else
+            System.out.println("\nVocê foi aprovado!");
+    }
+}
