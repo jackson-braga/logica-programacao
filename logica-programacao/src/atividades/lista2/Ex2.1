@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        int idade;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite a sua idade");
+        idade = scan.nextInt();
+        if(idade<=67&&idade>=18)
+            System.out.println("Pode doar sangue");
+        else
+            System.out.println("Não pode doar sangue");
+    }
+}
