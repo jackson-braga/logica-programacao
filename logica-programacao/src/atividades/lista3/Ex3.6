@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Exercicio6{
+    public static void main(String[] args) {
+        double nota1;
+        double nota2;
+        double nota3;
+        double notafinal;
+        int peso1;
+        int peso2;
+        int peso3;
+        int selecao;
+        Scanner scan = new Scanner(System.in);
+        do {
+            System.out.println("\nPor favor selecione a opção deseja\n1. Média aritmética\n2. Média ponderada\n3. Sair\n");
+            selecao =scan.nextInt();
+            if(selecao<1||selecao>3) {
+                System.out.println("Opção inválida");
+                continue;
+            }
+            if(selecao==1) {
+                System.out.println("Por favor digite a primeira nota");
+                nota1 = scan.nextDouble();
+                System.out.println("Por favor digite a segunda nota");
+                nota2 = scan.nextDouble();
+                notafinal = (nota1 + nota2) / 2;
+                System.out.printf("A média final é de "+"%.2f",notafinal);
+            }
+            if(selecao==2) {
+                System.out.println("Por favor digite a primeira nota");
+                nota1 = scan.nextDouble();
+                System.out.println("Por favor digite o peso da primeira nota");
+                peso1 = scan.nextInt();
+                System.out.println("Por favor digite a segunda nota");
+                nota2 = scan.nextDouble();
+                System.out.println("Por favor digite o peso da segunda nota");
+                peso2 = scan.nextInt();
+                System.out.println("Por favor digite a terceira nota");
+                nota3 = scan.nextDouble();
+                System.out.println("Por favor digite o peso da terceira nota");
+                peso3 = scan.nextInt();
+                notafinal = (nota1*peso1 + nota2*peso2 + nota3*peso3) / (peso1 + peso2 + peso3);
+                System.out.printf("A média final é de "+"%.2f",notafinal);
+            }
+            System.out.println();
+        }while(selecao != 3);
+        System.out.println("Finalizando");
+    }
+}
