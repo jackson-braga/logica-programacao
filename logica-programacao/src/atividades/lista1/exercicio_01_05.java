@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class exercicio_05 {
+public class exercicio_01_05 {
     public static void main(String[] args) {
         Scanner  scann = new Scanner(System.in);
 

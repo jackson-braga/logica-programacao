@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class exercicio_12 {
+public class exercicio_01_12 {
     public static void main(String[] args) {
         Scanner scann = new Scanner(System.in);
 

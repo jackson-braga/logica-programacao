@@ -4,7 +4,7 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class lista2_exercicio_01 {
+public class exercicio_01_01 {
     public static void main(String[] args) {
 
         Scanner scann = new Scanner(System.in);
