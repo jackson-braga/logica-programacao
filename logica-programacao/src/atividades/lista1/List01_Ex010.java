@@ -14,7 +14,7 @@ public class List01_Ex010 {
 
         float horaSalario = salario / 160;
         float horasExtras = 0;
-        float calculoFinal = 0;
+        float calculoFinal;
         float calculoHorasExtras = 0;
 
         if(horasTrabalhadas <= 160) {
@@ -26,7 +26,7 @@ public class List01_Ex010 {
             calculoHorasExtras = (calcHoraExtra * horasExtras) + (horaSalario * horasExtras);
             calculoFinal = (calculoHorasExtras + salario);
         }
-        System.out.println("Salário do Funcionário: R$ " + new DecimalFormat(".##").format(salario));
+        System.out.printf("Salário do Funcionário: R$ " + new DecimalFormat(".##").format(salario));
         System.out.println("Salário por hora: R$ " + new DecimalFormat(".##").format(horaSalario));
         System.out.println("Quantidade de horas trabalhadas: " + new DecimalFormat("").format(horasTrabalhadas));
         System.out.println("Horas Extras adicionais: " + new DecimalFormat("").format(horasExtras));

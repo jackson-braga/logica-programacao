@@ -12,23 +12,23 @@ public class List01_Ex013 {
         String combustivelEscolhido = scan.nextLine();
         System.out.println("Quantos litros foram abastecidos: ");
         float quantCombustivel = scan.nextFloat();
+        float precolitro = 0;
+        combustivelEscolhido = combustivelEscolhido.toUpperCase();
 
-        if (combustivelEscolhido == "A" && quantCombustivel <= 20) {
+        if (combustivelEscolhido.equals("A") && quantCombustivel <= 20) {
             float descontoLitro = (precoAlcool * 2) / 100;
-            float precolitro = (precoAlcool - descontoLitro) * quantCombustivel;
-            System.out.println("O valor total do abastecimento foi de: R$ " + new DecimalFormat(".##").format(precolitro));
-        } else if (combustivelEscolhido == "A" || combustivelEscolhido == "a" && quantCombustivel > 20) {
+            precolitro = (precoAlcool - descontoLitro) * quantCombustivel;
+        } else if (combustivelEscolhido.equals("A") && quantCombustivel > 20) {
             float descontoLitro = (precoAlcool * 5) / 100;
-            float precolitro = (precoAlcool - descontoLitro) * quantCombustivel;
-            System.out.println("O valor total do abastecimento foi de: R$ " + new DecimalFormat(".##").format(precolitro));
-        } else if (combustivelEscolhido == "G" || combustivelEscolhido == "g" && quantCombustivel <= 20) {
+            precolitro = (precoAlcool - descontoLitro) * quantCombustivel;
+        } else if (combustivelEscolhido.equals("G") && quantCombustivel <= 20) {
             float descontoLitro = (precoGasolina * 3) / 100;
-            float precolitro = (precoGasolina - descontoLitro) * quantCombustivel;
-            System.out.println("O valor total do abastecimento foi de: R$ " + new DecimalFormat(".##").format(precolitro));
-        } else if (combustivelEscolhido == "G" || combustivelEscolhido == "g" && quantCombustivel > 20) {
+            precolitro = (precoGasolina - descontoLitro) * quantCombustivel;
+        } else if (combustivelEscolhido.equals("G")&& quantCombustivel > 20) {
             float descontoLitro = (precoGasolina * 6) / 100;
-            float precolitro = (precoGasolina - descontoLitro) * quantCombustivel;
-            System.out.println("O valor total do abastecimento foi de: R$ " + new DecimalFormat(".##").format(precolitro));
+            precolitro = (precoGasolina - descontoLitro) * quantCombustivel;
         }
+
+        System.out.println("O valor total do abastecimento foi de: R$ " + new DecimalFormat(".##").format(precolitro));
     }
 }
