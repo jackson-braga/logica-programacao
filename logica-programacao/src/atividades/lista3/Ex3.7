@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Exercicio7{
+    public static void main(String[] args) {
+        double valor1;
+        double valor2;
+        double valorfinal;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Por favor digite o primeiro valor");
+        valor1 =scan.nextInt();
+        do {
+            System.out.println("Por favor digite o segundo valor");
+            valor2 =scan.nextInt();
+            if(valor2==0) {
+                System.out.println("Valor inválido");
+                continue;
+            }
+        }while(valor2==0);
+        valorfinal = valor1/valor2;
+        System.out.printf(valor1 + " dividido por " + valor2 + " é igual a ");
+        System.out.printf("%.2f",valorfinal);
+    }
+}
