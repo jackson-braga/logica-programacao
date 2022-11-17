@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Exercicio8 {
+
+    public static void main(String[] args) {
+        String teste1;
+        String teste2;
+        String teste3;
+        String teste4;
+        String teste5;
+        int positivos = 0;
+        System.out.println("Responda com sim ou não");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Telefonou para vítima?");
+        teste1 = scan.next();
+        System.out.println("Esteve no local do crime?");
+        teste2 = scan.next();
+        System.out.println("Mora perto da vítima?");
+        teste3 = scan.next();
+        System.out.println("Devia para vítima?");
+        teste4 = scan.next();
+        System.out.println("Já trabalhou com a vítima?");
+        teste5 = scan.next();
+        if(teste1.equals("sim"))
+            positivos++;
+        if(teste2.equals("sim"))
+            positivos++;
+        if(teste3.equals("sim"))
+            positivos++;
+        if(teste4.equals("sim"))
+            positivos++;
+        if(teste5.equals("sim"))
+            positivos++;
+        if (positivos==2)
+            System.out.println("Suspeito");
+        if (positivos>2&&positivos<5)
+            System.out.println("Cúmplice");
+        if (positivos==5)
+            System.out.println("Assassino");
+        if(positivos<2)
+            System.out.println("Inocente");
+    }
+}
