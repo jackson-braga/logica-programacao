@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercicio9 {
+    public static void main(String[] args) {
+        double n;
+        Scanner scan = new Scanner(System.in);
+        do {
+                System.out.println("Por favor um número maior que 1");
+                n = scan.nextInt();
+                if (n < 1) {
+                    System.out.println("Valor inválido");
+                    continue;
+                }
+            } while (n < 1);
+        for(int i = 1; i <= n; i++){
+            System.out.println(i);
+        }
+    }
+}
