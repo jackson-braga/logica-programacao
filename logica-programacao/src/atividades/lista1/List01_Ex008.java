@@ -1,3 +1,5 @@
+package atividades.lista1;
+
 import java.util.Scanner;
 
 public class List01_Ex008 {
