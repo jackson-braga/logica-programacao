@@ -15,7 +15,7 @@ public class Q4 {
         if (ang1==90.0 || ang2==90.0 || ang3==90.0){
             System.out.println("Triângulo Retângulo.");
         }
-        else if (ang1>90.0 || ang2>90.0 || ang3>90.0)) {
+        else if (ang1>90.0 || ang2>90.0 || ang3>90.0) {
             System.out.println("Triângulo Obtusângulo.");
         }
         else {
