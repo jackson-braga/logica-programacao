@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Calculadora {
-    int index;
 
     public static void main(String[] args) {
         // Entrada de dados
