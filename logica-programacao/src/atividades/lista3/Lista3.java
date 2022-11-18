@@ -9,9 +9,9 @@ public class Lista3 {
 //        exec1();
 //        exec2();
 //        exec3();
-        exec4();
+//        exec4();
 //        exec5();
-//        exec6();
+//       exec6();
 //        exec7();
 //        exec8();
 //        exec9();
@@ -94,75 +94,113 @@ public class Lista3 {
         System.out.println("Pessoas de 46 a 60 anos: " + f4 + " pessoa(s) ou " + (f4*10) + "%");
         System.out.println("Pessos acima de 61 anos: " + f5 + " pessoa(s) ou " + (f5*10) + "%");
     }
-    public static void exec5(){
+    public static void exec5() {
 
-        int ano;
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite o ano: ");
-        ano = scan.nextInt();
+        System.out.print("Digite o tamanho da pirâmide: ");
+        int n = scan.nextInt();
 
-        if ((ano % 4 == 0) && (ano % 100 != 0)) {
-            System.out.println("\nAno bissexto");
-        }
-        else {
-            System.out.println("\nNão é bissexto");
+        for (int i = 1; i <= n; i++) {
+           for (int j = 0; j != i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
     public static void exec6(){
 
-        int ano;
+        int opcao = 0;
+        double[] valor = new double[3];
+        double media;
+        double[] peso = new double[3];
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite o ano: ");
-        ano = scan.nextInt();
 
-        if ((ano % 4 == 0) && (ano % 100 != 0)) {
-            System.out.println("\nAno bissexto");
-        }
-        else {
-            System.out.println("\nNão é bissexto");
+        while (opcao != 3)  {
+            System.out.println("\nDigite o número referente a uma das opções: ");
+            System.out.println("1. Média aritmética");
+            System.out.println("2. Média ponderada");
+            System.out.println("3. Sair");
+            opcao = scan.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    for (int i = 1; i < 3; i++) {
+                        System.out.print("Digite a nota " + i + ": ");
+                        valor[i] = scan.nextInt();
+                    }
+                    media = (valor[1] + valor[2])/2;
+                    System.out.println("A média aritmética é: " + media);
+                    break;
+
+                case 2:
+                    for (int i = 0; i < 3; i++) {
+                        System.out.print("Digite a nota " + (i + 1) + ": ");
+                        valor[i] = scan.nextInt();
+                        System.out.print("Digite o peso " + (i + 1) + ": ");
+                        peso[i] = scan.nextInt();
+                    }
+                    media = ((valor[0] * peso[0]) + (valor[1] * peso[1]) + (valor[2] * peso[2])) / (peso[0] + peso[1] + peso[2]);
+                    System.out.println("A média ponderada é: " + media);
+                    break;
+
+                case 3:
+                    break;
+            }
         }
     }
-    public static void exec7(){
+    public static void exec7() {
 
-        int ano;
+        double valor1 = 0, valor2 = 0;
+        double div;
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite o ano: ");
-        ano = scan.nextInt();
 
-        if ((ano % 4 == 0) && (ano % 100 != 0)) {
-            System.out.println("\nAno bissexto");
-        }
-        else {
-            System.out.println("\nNão é bissexto");
+        while (valor2 == 0) {
+            System.out.println("\nDigite o primeiro valor: ");
+            valor1 = scan.nextInt();
+            System.out.println("Digite o segundo valor: ");
+            valor2 = scan.nextInt();
+            if (valor2 == 0) {
+                System.out.println("VALOR INVÁLIDO");
+            }
+            else {
+                div = valor1 / valor2;
+                System.out.println("O resultado da divisão é: " + div);
+            }
         }
     }
-    public static void exec8(){
+    public static void exec8() {
 
-        int ano;
+        String opcao = "S";
+        double valor1, valor2;
+        double media;
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite o ano: ");
-        ano = scan.nextInt();
 
-        if ((ano % 4 == 0) && (ano % 100 != 0)) {
-            System.out.println("\nAno bissexto");
-        }
-        else {
-            System.out.println("\nNão é bissexto");
+        while (opcao.equalsIgnoreCase("S")) {
+            System.out.print("Digite a nota 1: ");
+            valor1 = scan.nextInt();
+            System.out.print("Digite a nota 2: ");
+            valor2 = scan.nextInt();
+            media = (valor1 + valor2) / 2;
+            System.out.println("A média aritmética é: " + media);
+            System.out.println("Deseja fazer um novo cálculo (S/N");
+            opcao = scan.next();
         }
     }
-    public static void exec9(){
+    public static void exec9() {
 
-        int ano;
+        double N = 0;
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite o ano: ");
-        ano = scan.nextInt();
 
-        if ((ano % 4 == 0) && (ano % 100 != 0)) {
-            System.out.println("\nAno bissexto");
-        }
-        else {
-            System.out.println("\nNão é bissexto");
+        while (N == 0) {
+            System.out.println("\nDigite o valor: ");
+            N = scan.nextInt();
+            if (N == 0) {
+                System.out.println("VALOR INVÁLIDO");
+            } else {
+                for (int i = 1; i <= N; i++) {
+                    System.out.println(i);
+                }
+            }
         }
     }
-
 }
