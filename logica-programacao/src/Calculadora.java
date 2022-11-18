@@ -1,7 +1,7 @@
 public class Calculadora {
     public double calcular(double valor1, double valor2, int indexOp) {
 
-        
+
         double resultado = 0;
 
         switch (indexOp) {
