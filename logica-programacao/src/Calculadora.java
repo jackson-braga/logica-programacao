@@ -1,48 +1,54 @@
-import javax.swing.plaf.PanelUI;
 import java.util.Scanner;
 
 public class Calculadora {
 
-    public static void main(String[] args) {
-        //Entrada de dados
-        //double valor1 = Double.valueOf(args[0]);
-        //double valor2 = Double.valueOf(args[1]);
-        //EOperacoesMatematica.
-        Scanner scan = new Scanner(System.in);
-        int indexOp;
-        do {
-            System.out.println("Escolha uma das operações abaixo:");
-            System.out.println("1 - Soma");
-            System.out.println("2 - Subtração");
-            System.out.println("3 - Multiplicação");
-            System.out.println("4 - Divisão");
-            System.out.println("0 - Sair");
-            indexOp = scan.nextInt();
-            if (indexOp < 0 || indexOp > 4) {
-                System.out.println("\nOperação inexistente\n");
-            }
-            else if (indexOp == 0) {
-                System.out.println("Finalizando Calculadora");
-                return;
-            }
-        } while (indexOp < 0 || indexOp > 4);
+    public double calcular(double valor1, double valor2, int operacao) {
 
-        System.out.println("Informe o primeiro número: ");
-        double valor1 = scan.nextDouble();
-        System.out.println("Informe o segundo número: ");
-        double valor2 = scan.nextDouble();
+        // public: todos podem ver
+        // private: somente a classe consegue visualizar
+        // protect: a classe e os filhos podem visualizar
+        // static é um método que pode ser acessado sem precisar que o objeto seja instanciado
+        // void não tem retorno
+
 
         double resultado = 0;
 
-        if (indexOp == 1) {
-            resultado = valor1 + valor2;
-        } else if (indexOp == 2) {
-            resultado = valor1 - valor2;
-        } else if (indexOp == 3) {
-            resultado = valor1 * valor2;
-        } else if (indexOp == 4) {
-            resultado = valor1 / valor2;
+        switch (operacao) {
+            case 1:
+                resultado = somar(valor1, valor2);
+                break;
+            case 2:
+                resultado = subtrair(valor1, valor2);
+                break;
+            case 3:
+                resultado = multiplicar(valor1, valor2);
+                break;
+            case 4:
+                resultado = dividir(valor1, valor2);
+                break;
+            default:
+                break;
         }
-        System.out.println("Resultado: " + resultado);
+
+        return resultado;
+
+
     }
+
+    private double somar(double valor1, double valor2) {
+        return valor1 + valor2;
+    }
+
+    private double subtrair(double valor1, double valor2) {
+        return valor1 - valor2;
+    }
+
+    private double multiplicar(double valor1, double valor2) {
+        return valor1 * valor2;
+    }
+
+    private double dividir(double valor1, double valor2) {
+        return valor1 / valor2;
+    }
+                                                                                                                   
 }
