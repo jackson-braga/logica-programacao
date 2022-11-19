@@ -2,6 +2,10 @@ package atividades.lista2;
 
 import java.util.Scanner;
 
+/**
+ * @author Samir Hamade
+ */
+
 public class ExerciciosLista2 {
     private static Scanner scan = new Scanner(System.in);
 
@@ -13,7 +17,7 @@ public class ExerciciosLista2 {
 //        exercicio5();
 //        exercicio6();
 //        exercicio7();
-//        exercicio8();
+        exercicio8();
     }
 
     private static void exercicio1() {
@@ -29,15 +33,13 @@ public class ExerciciosLista2 {
     private static void exercicio2() {
         System.out.println("Informe o número de lados do polígono: ");
         byte quantidadeLados = scan.nextByte();
-        System.out.println("Informe o valor da base: ");
-        double base = scan.nextDouble();
-        System.out.println("Informe o valor da altura: ");
-        double altura = scan.nextDouble();
-        double area = (base * altura) / 2;
+        System.out.println("Informe a medida do lado em centímetros: ");
+        double valorLado = scan.nextDouble();
         if (quantidadeLados == 3) {
-            System.out.println("TRIÂNGULO");
+            double area = ((valorLado * 2) * Math.sqrt(3)) / 4;
+            System.out.printf("TRIÂNGULO - valor da área: %.2f", area);
         } else if (quantidadeLados == 4) {
-            System.out.println("QUADRADO");
+            System.out.printf("QUADRADO - valor da área: %.2f", valorLado * 2);
         } else if (quantidadeLados == 5) {
             System.out.println("PENTÁGONO");
         } else if (quantidadeLados < 3) {
@@ -70,21 +72,31 @@ public class ExerciciosLista2 {
         double angulo2 = scan.nextDouble();
         System.out.print("Ângulo 3: ");
         double angulo3 = scan.nextDouble();
-        if ((angulo1 < 90) && (angulo2 < 90) && (angulo3 < 90)) {
-            System.out.println("Triângulo acutângulo");
-        } else if ((angulo1 > 90) || (angulo2 > 90) || (angulo3 > 90)) {
-            System.out.println("Triângulo obtusângulo");
-        } else if ((angulo1 == 90) || (angulo2 == 90) || (angulo3 == 90)) {
-            System.out.println("Triângulo retângulo");
-        }
+        if (angulo1 + angulo2 + angulo3 == 180) {
+            if ((angulo1 < 90) && (angulo2 < 90) && (angulo3 < 90)) {
+                System.out.println("Triângulo acutângulo");
+            } else if ((angulo1 > 90) || (angulo2 > 90) || (angulo3 > 90)) {
+                System.out.println("Triângulo obtusângulo");
+            } else if ((angulo1 == 90) || (angulo2 == 90) || (angulo3 == 90)) {
+                System.out.println("Triângulo retângulo");
+            }
+        } else System.out.println("Valores informados não formam um triângulo");
     }
 
     private static void exercicio5() {
         System.out.println("Digite uma letra");
         String letra = scan.next().toLowerCase();
-        char[] vogais = {('a'), 'e', 'i', 'o', 'u'};
+        if (letra.length() > 1) {
+            System.out.println("informe somente uma letra");
+            return;
+        }
+        if (letra.matches("[^A-Za-z_]") == true) {
+            System.out.println(letra + " não é uma letra");
+            return;
+        }
+        char[] vogais = {'a', 'e', 'i', 'o', 'u'};
         for (int i = 0; i < vogais.length; i++) {
-            if (letra.equalsIgnoreCase(String.valueOf(vogais[i]))) {
+            if (letra.equals(String.valueOf(vogais[i]))) {
                 System.out.println("Letra digitada é uma vogal");
                 return;
             }
@@ -100,6 +112,7 @@ public class ExerciciosLista2 {
         double media = (nota1 + nota2) / 2;
         char conceito = 0;
         String mensagem = "As notas foram: \nNota 1: " + nota1 + "\nNota 2: " + nota2 + "\nMédia: " + media;
+
         if (media <= 7.5 && media >= 0) {
             if (media <= 4) {
                 conceito = 'E';

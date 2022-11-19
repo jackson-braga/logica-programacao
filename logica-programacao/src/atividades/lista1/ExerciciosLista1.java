@@ -2,6 +2,10 @@ package atividades.lista1;
 
 import java.util.Scanner;
 
+/**
+ * @author Samir Hamade
+ */
+
 public class ExerciciosLista1 {
     private static Scanner scan = new Scanner(System.in);
     private static final double PRECO_GASOLINA = 4.79;
@@ -75,7 +79,7 @@ public class ExerciciosLista1 {
         System.out.println("Informe a temperatura em Fahrenheit: ");
         double temperatura = scan.nextDouble();
         double celsius = ((temperatura - 32) / 9) * 5;
-        System.out.println("O temperatura em Celsius é " + celsius);
+        System.out.printf("O temperatura em Celsius é %.2f graus", celsius);
     }
 
     private static void exercicio6() {
@@ -180,7 +184,7 @@ public class ExerciciosLista1 {
 
     private static void exercicio13() {
         System.out.println("Informe o tipo de combustível: \nA-Alcool\nG-Gasolina");
-        String combustivel = scan.next();
+        String combustivel = scan.nextLine();
         System.out.println("Informe a quantidade de litros: ");
         double quantidadeLitros = scan.nextDouble();
         double valorTotal = 0;
@@ -202,7 +206,7 @@ public class ExerciciosLista1 {
                 valorTotal = (quantidadeLitros * PRECO_ALCOOL) - desconto;
             }
         }
-        System.out.println("O valor total a ser pago é " + valorTotal);
+        System.out.printf("O valor total a ser pago é %.2f reais", valorTotal);
     }
 
     private static void exercicio14() {
@@ -228,16 +232,18 @@ public class ExerciciosLista1 {
     }
 
     private static void exercicio15() {
+        System.out.println("Informe o ano atual: ");
+        int anoAtual = scan.nextInt();
         System.out.println("Informe o ano de seu nascimento: ");
         int anoNascimento = scan.nextInt();
         System.out.println("Informe o ano de seu ingresso na empresa");
         int anoIngressoEmpresa = scan.nextInt();
-        int idade = 2022 - anoNascimento;
-        int tempoDeTrabalho = 2022 - anoIngressoEmpresa;
+        int idade = anoAtual - anoNascimento;
+        int tempoDeTrabalho = anoAtual - anoIngressoEmpresa;
         if ((idade >= 65) || (tempoDeTrabalho >= 30) || (idade >= 60 && tempoDeTrabalho >= 25)) {
             System.out.println("Requerer aposentadoria");
         } else {
-            System.out.println("Não requerer");
+            System.out.println("Não requerer aposentadoria");
         }
     }
 }
