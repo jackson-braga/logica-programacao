@@ -1,5 +1,6 @@
 package atividades.lista1;
 import java.util.Scanner;
+
 public class ExeUm {
     public static void main(String[] args) {
 
@@ -8,7 +9,6 @@ public class ExeUm {
         int area;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println();
 
         System.out.println("Digite o valor da base do retângulo: ");
         base = scanner.nextInt();
