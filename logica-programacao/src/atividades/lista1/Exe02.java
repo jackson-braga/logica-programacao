@@ -12,10 +12,6 @@ public class Exe02 {
         int anoNascimento;
         int anoAtual;
 
-        int qtdDias;
-        int qtdMes;
-        int qtdAno;
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Em que ano você nasceu? ");
@@ -33,6 +29,33 @@ public class Exe02 {
         System.out.println("Que dia é hoje? ");
         diaAtual = scanner.nextInt();
 
+        int qtdAnos;
+        int qtdDiasAnos;
+        int qtdMeses;
+        int qtdDiasMeses;
+        int qtdDias;
+
+        qtdAnos = anoAtual - anoNascimento;
+        qtdDiasAnos = qtdAnos * 365;
+
+        if (mesAtual > mesNascimento) {
+            qtdMeses = mesAtual - mesNascimento;
+        } else {
+            qtdMeses = mesNascimento - mesAtual;
+        }
+
+        qtdDiasMeses = qtdMeses * 30;
+
+        if (diaAtual > diaNascimento) {
+            qtdDias = diaAtual - diaNascimento;
+        } else {
+            qtdDias = diaNascimento - diaAtual;
+        }
+
+        int qtdDiasVividos;
+
+        qtdDiasVividos = qtdDiasAnos + qtdDiasMeses + qtdDias;
+        System.out.println("Você viveu " + qtdDiasVividos + " dias!");
 
     }
 
