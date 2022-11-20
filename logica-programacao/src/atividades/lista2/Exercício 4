@@ -1,0 +1,30 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Informe os ângulos do seu triangulo");
+        System.out.println("1° Ângulo");
+        double angulo1 = scan.nextDouble();
+        System.out.println("2° Ângulo");
+        double angulo2 = scan.nextDouble();
+        System.out.println("3° Ângulo");
+        double angulo3 = scan.nextDouble();
+
+        if ((angulo1 + angulo2 + angulo3) != 180) {
+            System.out.println("Revise os dados informados");
+        } else if ((angulo1 == 90) || (angulo2 == 90) || (angulo3 == 90)) {
+            System.out.println("O triângulo é Retângulo");
+        } else if ((angulo1 > 90) || (angulo2 > 90) || (angulo3 > 90)) {
+            System.out.println("O triângulo é Obtusângulo");
+        } else if ((angulo1 < 90) && (angulo2 < 90) && (angulo3 < 90)) {
+            System.out.println("O triângulo é Acutângulo");
+        }
+    }
+}
