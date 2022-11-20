@@ -1,0 +1,25 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Quantos lados iguais seu triangulo tem?");
+        int lados = scan.nextInt();
+
+        if ((lados > 3) || (lados < 0)) {
+            System.out.println("Não se trata de um triângulo");
+        } else if (lados == 3) {
+            System.out.println("Se trata de um triângulo Equilátero");
+        } else if (lados == 2) {
+            System.out.println("Se trata de um triângulo Isósceles");
+        } else {
+            System.out.println("Se trata de um triângulo Escaleno");
+        }
+    }
+}
