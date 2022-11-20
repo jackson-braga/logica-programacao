@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Digite um número");
+        int num = scan.nextInt();
+        while (num == 0) {
+            System.out.println("VALOR INVÁLIDO");
+            num = scan.nextInt();
+        }
+
+        for(int i = 1; i <= num; i++) {
+                System.out.println(i);
+            }
+    }
+}
