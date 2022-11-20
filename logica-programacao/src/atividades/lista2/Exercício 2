@@ -1,0 +1,47 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+//        Área de um triangulo qualquer é ((base x lado x Sen^c)/2) || Área de um triangulo equilátero (Lado*lado*raiz3)/4
+
+        System.out.println("Quantos lados tem o poligono?");
+        int lados = scan.nextInt();
+
+        if (lados < 3) {
+            System.out.println("Não é um polígono");
+        } else if (lados > 5) {
+            System.out.println("Polígono não identificado");
+        }
+
+        if (lados == 3) {
+            System.out.println("Informe o tamanho da base");
+            double base = scan.nextDouble();
+            System.out.println("Informe a hipotenusa, caso seja igual ao lado, informe somente o lado");
+            double hip = scan.nextDouble();
+            System.out.println("Informe o lado");
+            double lado = scan.nextDouble();
+            if (lado == base && base == hip) {
+                double area = (((lado * lado) * 1.73) / 4);
+                System.out.println("Se trata de um triangulo equilátero com área de " + area + " cm");
+            } else {
+                double area = ((lado * base * (lado / hip)) / 2);
+                System.out.println("Se trata de um Triangulo com área de " + area + " cm");
+            }
+        } else if (lados == 4) {
+            System.out.println("Informe o tamanho dos lados");
+            double lado = scan.nextDouble();
+
+            System.out.println("Se trata de um quadrado com área de " + lado * lado + " cm");
+        } else if (lados == 5) {
+            System.out.println("Se trata de um Pentágono");
+        }
+    }
+}
+
