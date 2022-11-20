@@ -11,7 +11,6 @@ public class Exercicio8 {
                                               "Devia para a vítima? (S/N) ",
                                               "Já trabalhou com a vítima? (S/N) "};
     private static final String SIM = "S";
-    private static final String EMPTY = "";
     private static final String SUSPEITA = "Suspeita";
     private static final String CUMPLICE = "Cúmplice";
     private static final String ASSASSINO = "Assassino";
@@ -35,8 +34,7 @@ public class Exercicio8 {
 
     private static int isSim(Scanner entrada) {
         String resposta = entrada.nextLine();
-        return resposta.length() != 1 ? getRespostasSim(entrada) :
-               resposta.toUpperCase().equals(SIM) ? 1 : 0;
+        return resposta.toUpperCase().equals(SIM) ? 1 : 0;
     }
 
     private static String getResultado(int sim) {
