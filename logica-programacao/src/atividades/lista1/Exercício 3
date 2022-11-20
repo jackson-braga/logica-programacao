@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Quantas pessoas votaram?");
+        double eleitores = scann.nextDouble();
+
+        System.out.println("Quantos votos foram brancos?");
+        double brancos = scann.nextDouble();
+
+        System.out.println("Quantos votos foram nulos?");
+        double nulos = scann.nextDouble();
+
+        System.out.println("Nessa eleição tivemos " + eleitores + " eleitores com " + brancos / eleitores +
+                "% de votos brancos, " + nulos / eleitores + "% de votos nulos e " + (eleitores - (brancos + nulos)) / eleitores + "% de votos válidos");
+
+    }
+}
