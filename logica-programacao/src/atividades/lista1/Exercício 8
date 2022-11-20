@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Qual foi a primeira nota do aluno?");
+        double nota1 = scann.nextDouble();
+
+        System.out.println("Qual foi a segunda nota do aluno?");
+        double nota2 = scann.nextDouble();
+
+        double media = (nota1+nota2)/2;
+
+        if (media >= 6) {
+            System.out.println("Parabéns você foi aprovado!!");
+        } else {
+            System.out.println("Infelizmente você foi reprovado ;(");
+        }
+    }
+}
