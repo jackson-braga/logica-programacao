@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite uma letra");
+        String letra = scan.next();
+        letra = letra.toUpperCase();
+
+        if (letra.contains("A") || letra.contains("E") || letra.contains("I") || letra.contains("O") ||
+                letra.contains("U")) {
+            System.out.println("É uma vogal");
+        } else {
+            System.out.println("É uma consoante");
+        }
+    }
+}
