@@ -20,7 +20,13 @@ public class Exe12 {
         System.out.println("Valor lado C: ");
         ladoC = scanner.nextInt();
 
+        if ((ladoA < (ladoB + ladoC)) && (ladoB < (ladoA + ladoC)) && (ladoC < (ladoA + ladoB))) {
+            System.out.println("É um triângulo!");
 
+        } else {
+            System.out.println("Não é um triângulo!");
+
+        }
 
     }
 
