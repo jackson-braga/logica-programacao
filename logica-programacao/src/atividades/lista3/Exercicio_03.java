@@ -14,7 +14,7 @@ public class Exercicio_03 {
 
         // Processamento de Dados
         for (int i = 0; i < listaIdades.length; i++) {
-            listaIdades[i] = idades.nextInt(10, 30);
+            listaIdades[i] = idades.nextInt(0, 100);
         }
         for (int listaIdade : listaIdades) {
             if (listaIdade >= 18) {
