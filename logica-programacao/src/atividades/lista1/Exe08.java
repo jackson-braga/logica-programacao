@@ -20,10 +20,10 @@ public class Exe08 {
         media = (notaUm + notaDois) / 2;
 
         if (media >= 6.0f) {
-            System.out.println("Sua média foi: " + media +  " - Aprovado");
+            System.out.println("Sua média foi: " + media +  " - Aprovado!");
 
         } else {
-            System.out.println("Sua média foi: " + media +  " - Reprovado");
+            System.out.println("Sua média foi: " + media +  " - Reprovado!");
 
         }
 
