@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Informe a idade das pessoas para saberem quantas tem idade maior ou igual a 18");
+        int cont = 0;
+        int idades = 0;
+
+        do {
+            System.out.println("Informe a idade da pessoa");
+            int idade = scan.nextInt();
+            if (idade >= 18) {
+                idades++;
+            }
+            cont++;
+        } while (cont != 10);
+
+        System.out.println("Existem " + idades + " pessoas com idade maior ou igual a 18 anos");
+    }
+}
