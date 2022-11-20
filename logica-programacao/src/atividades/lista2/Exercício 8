@@ -1,0 +1,58 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        ArrayList<String> lista = new ArrayList<>();
+
+        System.out.println("Digite S para Sim e N para Não");
+
+        System.out.println("Telefonou para a vítima?");
+        String pergunta1 = scan.next();
+        pergunta1 = pergunta1.toUpperCase();
+        lista.add(pergunta1);
+
+        System.out.println("Esteve no local do crime?");
+        String pergunta2 = scan.next();
+        pergunta2 = pergunta2.toUpperCase();
+        lista.add(pergunta2);
+
+        System.out.println("Mora perto da vítima?");
+        String pergunta3 = scan.next();
+        pergunta3 = pergunta3.toUpperCase();
+        lista.add(pergunta3);
+
+        System.out.println("Devia para a vítima?");
+        String pergunta4 = scan.next();
+        pergunta4 = pergunta4.toUpperCase();
+        lista.add(pergunta4);
+
+        System.out.println("Já trabalhou com a vítima?");
+        String pergunta5 = scan.next();
+        pergunta5 = pergunta5.toUpperCase();
+        lista.add(pergunta5);
+
+        int cont = 0;
+        for(String letra : lista){
+            if (letra.contains("S")) {
+                cont++;
+            }
+        }
+
+        if(cont == 2) {
+            System.out.println("Pessoa Suspeita");
+        } else if ((cont == 3) || (cont == 4)) {
+            System.out.println("Pessoa Cúmplice");
+        } else if (cont == 5) {
+            System.out.println("Assassino!!");
+        } else {
+            System.out.println("Inocente no momento");
+        }
+    }
+}
