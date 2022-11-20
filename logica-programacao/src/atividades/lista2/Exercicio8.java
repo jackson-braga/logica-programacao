@@ -5,17 +5,17 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio8 {
-    private static final String[] QUESTOES = {"Telefonou para a vÃ­tima? (S/N) ",
+    private static final String[] QUESTOES = {"Telefonou para a vítima? (S/N) ",
                                               "Esteve no local do crime? (S/N) ",
-                                              "Mora perto da vÃ­tima? (S/N) ",
-                                              "Devia para a vÃ­tima? (S/N) ",
-                                              "JÃ¡ trabalhou com a vÃ­tima? (S/N) "};
+                                              "Mora perto da vítima? (S/N) ",
+                                              "Devia para a vítima? (S/N) ",
+                                              "Já trabalhou com a vítima? (S/N) "};
     private static final String SIM = "S";
     private static final String SUSPEITA = "Suspeita";
-    private static final String CUMPLICE = "CÃºmplice";
+    private static final String CUMPLICE = "Cúmplice";
     private static final String ASSASSINO = "Assassino";
     private static final String INOCENTE = "Inocente";
-    private static final String RESULTADO = "ClassificaÃ§ao: %s \n";
+    private static final String RESULTADO = "Classificação: %s \n";
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
