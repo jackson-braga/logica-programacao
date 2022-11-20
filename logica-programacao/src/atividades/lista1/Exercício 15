@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Quantos anos o funcionário tem?");
+        int idade = scann.nextInt();
+        System.out.println("Em que ano ele entrou na empresa?");
+        int empregado = scann.nextInt();
+
+        int anos_trabalhados = 2022 - empregado;
+
+        if(idade >= 65){
+            System.out.println("O funcionário está qualificado para se aposentar pela idade");
+        } else if (anos_trabalhados >= 30) {
+            System.out.println("O funcionário está qualificado para se aposentar pelos anos trabalhados");
+        } else if ((idade >= 60) && (anos_trabalhados >= 25)) {
+            System.out.println("O funcionário está qualificado para se aposentar");
+        } else {
+            System.out.println("O funcionário não está qualificado para se aposentar");
+        }
+    }
+}
