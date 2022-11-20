@@ -50,6 +50,13 @@ public class Exe02 {
             qtdMeses = mesAtual - mesNascimento;
             qtdDiasMeses = qtdMeses * 30;
             qtdDiasVividos = qtdDiasAnos + qtdDiasMeses + qtdDias;
+
+        } else if (mesAtual == mesNascimento && diaAtual > diaNascimento) {
+            qtdDiasVividos = qtdDiasAnos + qtdDias;
+
+        } else if (mesAtual == mesNascimento && diaAtual < diaNascimento) {
+            qtdDiasVividos = qtdDiasAnos - qtdDias;
+
         } else {
             qtdMeses = mesNascimento - mesAtual;
             qtdDiasMeses = qtdMeses * 30;
