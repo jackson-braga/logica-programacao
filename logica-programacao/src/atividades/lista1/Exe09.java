@@ -11,10 +11,10 @@ public class Exe09 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Em que ano você nasceu? ");
+        System.out.println("Em que ano você nasceu?");
         anoNascimento = scanner.nextInt();
 
-        System.out.println("Em que ano estamos? ");
+        System.out.println("Em que ano estamos?");
         anoAtual = scanner.nextInt();
 
         idade = anoAtual - anoNascimento;

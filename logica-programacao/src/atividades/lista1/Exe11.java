@@ -12,13 +12,13 @@ public class Exe11 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Quantidade atual do estoque: ");
+        System.out.println("Quantidade atual do estoque:");
         qtdAtualEstoque = scanner.nextInt();
 
-        System.out.println("Quantidade máxima do estoque: ");
+        System.out.println("Quantidade máxima do estoque:");
         qtdMaxEstoque = scanner.nextInt();
 
-        System.out.println("Quantidade mínima do estoque: ");
+        System.out.println("Quantidade mínima do estoque:");
         qtdMinEstoque = scanner.nextInt();
 
         qtdMedia = (qtdMaxEstoque + qtdMinEstoque) / 2;

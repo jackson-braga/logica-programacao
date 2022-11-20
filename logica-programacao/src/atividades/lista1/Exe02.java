@@ -14,19 +14,19 @@ public class Exe02 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Em que ano você nasceu? ");
+        System.out.println("Em que ano você nasceu?");
         anoNascimento = scanner.nextInt();
-        System.out.println("Em que ano estamos? ");
+        System.out.println("Em que ano estamos?");
         anoAtual = scanner.nextInt();
 
-        System.out.println("Em que mês você nasceu? ");
+        System.out.println("Em que mês você nasceu?");
         mesNascimento = scanner.nextInt();
-        System.out.println("Em que mês estamos? ");
+        System.out.println("Em que mês estamos?");
         mesAtual = scanner.nextInt();
 
-        System.out.println("Em que dia você nasceu? ");
+        System.out.println("Em que dia você nasceu?");
         diaNascimento = scanner.nextInt();
-        System.out.println("Que dia é hoje? ");
+        System.out.println("Que dia é hoje?");
         diaAtual = scanner.nextInt();
 
         int qtdAnos;

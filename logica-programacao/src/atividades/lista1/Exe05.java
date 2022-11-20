@@ -15,7 +15,7 @@ public class Exe05 {
 
         tempCelsius = ((tempFahrenheit - 32) / 9) * 5;
 
-        System.out.println("A temperatura em Celsius é: " + tempCelsius + "ºC");
+        System.out.println("A temperatura em Celsius é: " + tempCelsius + "ºC.");
 
     }
 

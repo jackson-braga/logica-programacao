@@ -23,19 +23,19 @@ public class Exe04 {
 
         } else {
 
-            System.out.println("Informe o valor de cada carro vendido: ");
+            System.out.println("Informe o valor de cada carro vendido:");
 
             for (int index = 1; index <= qtdCarrosVendidos; index++) {
                 double valorCarro = scanner.nextDouble();
                 comissao = valorCarro * 0.05;
-                System.out.println("A comissão para esta venda é de: R$" + comissao);
+                System.out.println("A comissão para esta venda é de: R$" + comissao +".");
             };
 
             salarioTotal = salarioFixo;
 
         }
 
-        System.out.println("Seu salário final é de: R$" + salarioTotal);
+        System.out.println("Seu salário final é de: R$" + salarioTotal + ".");
 
     }
 

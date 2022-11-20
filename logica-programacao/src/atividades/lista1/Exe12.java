@@ -11,13 +11,13 @@ public class Exe12 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Valor lado A: ");
+        System.out.println("Valor lado A:");
         ladoA = scanner.nextInt();
 
-        System.out.println("Valor lado B: ");
+        System.out.println("Valor lado B:");
         ladoB = scanner.nextInt();
 
-        System.out.println("Valor lado C: ");
+        System.out.println("Valor lado C:");
         ladoC = scanner.nextInt();
 
         if ((ladoA < (ladoB + ladoC)) && (ladoB < (ladoA + ladoC)) && (ladoC < (ladoA + ladoB))) {

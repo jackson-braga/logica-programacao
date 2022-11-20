@@ -13,10 +13,10 @@ public class Exe10 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Qual o seu salário? ");
+        System.out.println("Qual o seu salário?");
         salario = scanner.nextDouble();
 
-        System.out.println("Quantas horas você trabalhou esse mês? ");
+        System.out.println("Quantas horas você trabalhou esse mês?");
         horasTrabalhadas = scanner.nextInt();
 
         valorHora = salario / 160;
@@ -33,7 +33,7 @@ public class Exe10 {
 
         }
 
-        System.out.println("Seu salário do mês é: R$" + salarioFinal);
+        System.out.println("Seu salário do mês é: R$" + salarioFinal + ".");
 
     }
 

@@ -16,7 +16,7 @@ public class Exe13 {
         System.out.println("Quantos litros de combustível você comprou?");
         litros = scanner.nextInt();
 
-        System.out.println("Qual combustível você comprou? Digite 'A' para Álcool e 'G' para Gasolina: ");
+        System.out.println("Qual combustível você comprou? Digite 'A' para Álcool e 'G' para Gasolina:");
         combustivel = scanner.next();
 
         if (combustivel.equalsIgnoreCase("A")) {

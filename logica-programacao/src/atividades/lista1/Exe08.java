@@ -11,10 +11,10 @@ public class Exe08 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite sua primeira nota: ");
+        System.out.println("Digite sua primeira nota:");
         notaUm = scanner.nextFloat();
 
-        System.out.println("Digite sua segunda nota: ");
+        System.out.println("Digite sua segunda nota:");
         notaDois = scanner.nextFloat();
 
         media = (notaUm + notaDois) / 2;

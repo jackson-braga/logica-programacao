@@ -32,9 +32,9 @@ public class Exe03 {
         pctgVotosNulo = (votosNulo * 100) / totalVotos;
         pctgVotosValidos = (votosValidos * 100) / totalVotos;
 
-        System.out.println("Porcentagem de votos em branco: " + pctgVotosBranco + "%");
-        System.out.println("Porcentagem de votos nulo: " + pctgVotosNulo + "%");
-        System.out.println("Porcentagem de votos válidos: " + pctgVotosValidos + "%");
+        System.out.println("Porcentagem de votos em branco: " + pctgVotosBranco + "%.");
+        System.out.println("Porcentagem de votos nulo: " + pctgVotosNulo + "%.");
+        System.out.println("Porcentagem de votos válidos: " + pctgVotosValidos + "%.");
 
     }
 
