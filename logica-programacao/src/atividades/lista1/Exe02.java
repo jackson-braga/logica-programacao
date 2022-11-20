@@ -34,17 +34,10 @@ public class Exe02 {
         int qtdMeses;
         int qtdDiasMeses;
         int qtdDias;
+        int qtdDiasVividos;
 
         qtdAnos = anoAtual - anoNascimento;
         qtdDiasAnos = qtdAnos * 365;
-
-        if (mesAtual > mesNascimento) {
-            qtdMeses = mesAtual - mesNascimento;
-        } else {
-            qtdMeses = mesNascimento - mesAtual;
-        }
-
-        qtdDiasMeses = qtdMeses * 30;
 
         if (diaAtual > diaNascimento) {
             qtdDias = diaAtual - diaNascimento;
@@ -52,9 +45,17 @@ public class Exe02 {
             qtdDias = diaNascimento - diaAtual;
         }
 
-        int qtdDiasVividos;
+        // Calculando quantidade de dias vididos
+        if (mesAtual > mesNascimento) {
+            qtdMeses = mesAtual - mesNascimento;
+            qtdDiasMeses = qtdMeses * 30;
+            qtdDiasVividos = qtdDiasAnos + qtdDiasMeses + qtdDias;
+        } else {
+            qtdMeses = mesNascimento - mesAtual;
+            qtdDiasMeses = qtdMeses * 30;
+            qtdDiasVividos = qtdDiasAnos - qtdDiasMeses - qtdDias;
+        }
 
-        qtdDiasVividos = qtdDiasAnos + qtdDiasMeses + qtdDias;
         System.out.println("Você viveu " + qtdDiasVividos + " dias!");
 
     }
