@@ -53,7 +53,7 @@ public class Exe08 {
 
         }
 
-        while (resposta.equalsIgnoreCase("S"));
+        while (resposta.equalsIgnoreCase("s"));
         System.out.println("Encerrado!");
 
 
