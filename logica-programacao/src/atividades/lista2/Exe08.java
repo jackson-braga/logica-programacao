@@ -46,7 +46,7 @@ public class Exe08 {
         if (qtdRespostasPositivas == 2) {
             System.out.println("Você é Suspeita.");
 
-        } else if (qtdRespostasPositivas >= 3 && qtdRespostasPositivas <=4) {
+        } else if (qtdRespostasPositivas == 3 || qtdRespostasPositivas == 4) {
             System.out.println("Você é Cúmplice");
 
         } else if (qtdRespostasPositivas == 5) {
@@ -54,6 +54,7 @@ public class Exe08 {
 
         } else {
             System.out.println("Você é Inocente.");
+            
         }
 
     }
