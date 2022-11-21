@@ -17,15 +17,15 @@ public class Exe04 {
         System.out.println("Quantos carros você vendeu este mês?");
         qtdCarrosVendidos = scanner.nextInt();
 
+        double comissaoTotal = 0;
         if (qtdCarrosVendidos == 0) {
-            comissao = 0;
+            comissaoTotal = 0;
             salarioTotal = salarioFixo;
 
         } else {
 
             System.out.println("Informe o valor de cada carro vendido:");
 
-            double comissaoTotal = 0;
             for (int index = 1; index <= qtdCarrosVendidos; index++) {
                 double valorCarro = scanner.nextDouble();
                 comissao = valorCarro * 0.05;
