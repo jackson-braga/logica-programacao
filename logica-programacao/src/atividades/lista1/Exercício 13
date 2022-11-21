@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Quantos litros foram gastos");
+        double litros = scann.nextDouble();
+        System.out.println("Escreva A para Alcool e G para Gasolina");
+        String letra = scann.next();
+        letra = letra.toUpperCase();
+
+        double pagamento = 0;
+
+        if (letra.equals("A") && litros <= 20) {
+            pagamento = +(litros * 0.98) * 3.69;
+        } else if (letra.equals("A") && litros > 20) {
+            pagamento = +(litros * 0.95) * 3.69;
+        } else if (letra.equals("G") && litros <= 20) {
+            pagamento = +(litros * 0.97) * 4.79;
+        } else if (letra.equals("G") && litros > 20) {
+            pagamento = +(litros * 0.94) * 4.79;
+        }
+
+        System.out.println("O valor foi de R$ " + pagamento);
+    }
+}

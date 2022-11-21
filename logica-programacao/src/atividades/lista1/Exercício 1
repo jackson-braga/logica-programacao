@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Informe a altura em centimetros:");
+        double altura = scann.nextDouble();
+        System.out.println("Informe o tamanho da base em centimetros:");
+        double base = scann.nextDouble();
+
+        System.out.println("A área do triangulo é de " + (altura + base) / 2 + " centimetros");
+
+    }
+}    

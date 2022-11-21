@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Quantas maças foram compradas?");
+        int maca = scann.nextInt();
+
+        double preco = 0;
+
+        if (maca < 12) {
+            preco = maca * 1.3;
+        } else {
+            preco = maca;
+        }
+
+        System.out.println("Foi gasto pelo cliente: R$ " + preco);
+    }
+}

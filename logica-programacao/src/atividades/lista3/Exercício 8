@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Informe as duas notas do aluno");
+
+        double nota1 = -1;
+        double nota2 = -1;
+        String resposta = "S";
+
+        while (resposta.equals("S")) {
+            while (nota1 < 0 || nota1 > 10) {
+                System.out.println("Digite a primeira nota");
+                nota1 = scan.nextDouble();
+            }
+            while (nota2 < 0 || nota2 > 10) {
+                System.out.println("Digite a segunda nota");
+                nota2 = scan.nextDouble();
+            }
+            System.out.println("A média do aluno é " + (nota1 + nota2) / 2 + "\nNOVO CÁLCULO (S/N)?");
+            resposta = scan.next();
+            resposta.toUpperCase(Locale.ROOT);
+        }
+    }
+}

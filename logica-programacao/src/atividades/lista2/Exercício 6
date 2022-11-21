@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Lista2 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Informe as duas notas do aluno");
+        System.out.println("1° Nota");
+        double nota1 = scan.nextDouble();
+        System.out.println("2° Nota");
+        double nota2 = scan.nextDouble();
+
+        double resultado = (nota1 + nota2) / 2;
+        if (resultado > 10) {
+            System.out.println("Verificar notas novamente");
+        } else if (resultado >= 9) {
+            System.out.println("O aluno foi aprovado com conceito A, Parabéns!!");
+        } else if (resultado >= 7.5) {
+            System.out.println("O aluno foi aprovado com conceito B, Parabéns!");
+        } else if (resultado >= 6) {
+            System.out.println("O aluno foi aprovado com conceito C, Essa foi por pouco!!");
+        } else if (resultado >= 4) {
+            System.out.println("Infelizmente o aluno foi reprovado com conceito D");
+        } else {
+            System.out.println("Infelizmente o aluno reprovou com conceito E");
+        }
+    }
+}

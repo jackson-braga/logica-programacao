@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+
+        // Faça um programa que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a quantidade de dias que
+        //essa pessoa já viveu. Considerar ano com 365 dias e mês com 30 dias.
+
+        System.out.println("Quantos anos você tem?");
+        int ano = scann.nextInt();
+
+        System.out.println("Quantos meses se passaram desde o seu aniversário? (Sem arredondar)");
+        int mes = scann.nextInt();
+
+        System.out.println("Quantos dias faltam para completar mais 1 mês de aniversário (levando em consideração que 1 mês tem 30 dias)");
+        int dia = scann.nextInt();
+
+
+        System.out.println("Você tem: " + ((ano * 365) + (mes * 30) + (30 - dia)) + " dias de vida");
+    }
+}

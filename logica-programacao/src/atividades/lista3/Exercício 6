@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite um número\n" +
+                "1. Média aritmética\n" +
+                "2. Média ponderada\n" +
+                "3. Sair");
+
+
+        int num = scan.nextInt();
+
+        if (num >= 4) {
+            System.out.println("Informe 1, 2 ou 3");
+        } else if (num == 1) {
+            System.out.println("Informe a primeira nota");
+            double nota1 = scan.nextDouble();
+            System.out.println("Informe a segunda nota");
+            double nota2 = scan.nextDouble();
+
+            System.out.println((nota1 + nota2) / 2);
+        } else if (num == 2) {
+            System.out.println("Informe a primeira nota");
+            double nota1 = scan.nextDouble();
+            System.out.println("Informe o peso da primeira nota");
+            double peso1 = scan.nextDouble();
+            System.out.println("Informe a segunda nota");
+            double nota2 = scan.nextDouble();
+            System.out.println("Informe o peso da segunda nota");
+            double peso2 = scan.nextDouble();
+            System.out.println("Informe a terceira nota");
+            double nota3 = scan.nextDouble();
+            System.out.println("Informe o peso da terceira nota");
+            double peso3 = scan.nextDouble();
+
+            System.out.println(((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3));
+
+        } else if (num == 3) {
+            System.out.println("Até mais!");
+        }
+    }
+}

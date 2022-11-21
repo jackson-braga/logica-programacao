@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Diga 1 número entre 1000 e 2000");
+        double num = scan.nextDouble();
+
+        if ((num >= 1000) && (num <= 2000)) {
+            if (num % 11 == 2) {
+                System.out.println("O número dividido por 11 da resto 2");
+            } else {
+                System.out.println("O número dividido por 11 não da resto 2");
+            }
+        } else {
+            System.out.println("Número não está entre 1000 e 2000");
+        }
+    }
+}

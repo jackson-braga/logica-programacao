@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Escreva o tamanho do triângulo");
+        int qtde = scan.nextInt();
+
+        for (int i = 0; i <= qtde; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.println("*");
+            }
+            System.out.println();
+        }
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Indique aqui o salário do vendedor");
+        double salario_fixo = scann.nextDouble();
+
+        System.out.println("Quantos carros o vendedor vendeu?");
+        int qtde_carros = scann.nextInt();
+
+        double cont = 0;
+        do {
+            System.out.println("Qual foi o valor do carro vendido em ordem de venda?");
+            double valor_carro = scann.nextDouble();
+            double comissao = valor_carro * 0.05;
+            cont += comissao;
+            qtde_carros--;
+        } while (qtde_carros != 0);
+
+        System.out.println("O salário final do vendedor foi de R$ " + (cont + salario_fixo));
+    }
+}

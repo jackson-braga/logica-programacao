@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+//        foram 160 horas = dividir salário por 160 horas
+
+        System.out.println("Qual o salário do funcionário?");
+        double salario = scann.nextDouble();
+
+        System.out.println("Quantas horas extras o funcionário fez?");
+        int extra = scann.nextInt();
+
+        double horas = salario / (40 * 4);
+        double horas_extras = extra * (horas * 1.5);
+
+        System.out.println("O funcionário trabalhou " + (40 + extra) + " horas, com um salário por hora de R$ "
+                + horas + " e com o salário total de " + (salario + horas_extras));
+
+    }
+}

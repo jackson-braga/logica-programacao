@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        int rep = 0;
+        double idade_15 = 0;
+        double idade_16_30 = 0;
+        double idade_31_45 = 0;
+        double idade_46_60 = 0;
+        double idade_61 = 0;
+
+        do {
+            System.out.println("Informe a idade da pessoa");
+            int idade = scan.nextInt();
+            if (idade <= 15) {
+                idade_15++;
+            } else if (idade <= 30) {
+                idade_16_30++;
+            } else if (idade <= 45) {
+                idade_31_45++;
+            } else if (idade <= 60) {
+                idade_46_60++;
+            } else {
+                idade_61++;
+            }
+
+            rep++;
+
+        } while (rep != 10);
+
+        System.out.println("Existem " + idade_15 + " com idade até 15 anos, sendo " + (idade_15 / 10) + "% das pessoas");
+        System.out.println("Existem " + idade_16_30 + " com idade de 16 a 30 anos, sendo " + (idade_16_30 / 10) + "% das pessoas");
+        System.out.println("Existem " + idade_31_45 + " com idade de 31 a 45 anos, sendo " + (idade_31_45 / 10) + "% das pessoas");
+        System.out.println("Existem " + idade_46_60 + " com idade de 46 a 60 anos, sendo " + (idade_46_60 / 10) + "% das pessoas");
+        System.out.println("Existem " + idade_61 + " com mais de 61 anos, sendo " + (idade_61 / 10) + "% das pessoas");
+    }
+}

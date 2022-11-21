@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Transformando graus Fahrenheit em graus Celsius");
+
+        System.out.println("Quantos graus Fahrenheit são?");
+        double fahrenheit = scann.nextDouble();
+
+        double celsius = ((fahrenheit - 32) / 9) * 5;
+
+        System.out.println("São " + celsius + "° graus");
+
+    }
+}

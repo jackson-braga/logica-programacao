@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Lista3 {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        ArrayList<Double> valores = new ArrayList<>();
+
+        System.out.println("Informe 3 valores");
+        System.out.println("1° Valor");
+        double valor1 = scan.nextDouble();
+        valores.add(valor1);
+        System.out.println("2° Valor");
+        double valor2 = scan.nextDouble();
+        valores.add(valor2);
+        System.out.println("3° Valor");
+        double valor3 = scan.nextDouble();
+        valores.add(valor3);
+
+        System.out.println("Ordem lida");
+        System.out.println(valores);
+
+        System.out.println("\nOrdem Crescente\n");
+        Collections.sort(valores);
+        System.out.println(valores);
+
+        System.out.println("\nOrdem Decrescente\n");
+        Collections.reverse(valores);
+        System.out.println(valores);
+    }
+}

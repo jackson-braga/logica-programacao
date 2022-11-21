@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Qual foi o produto vendido?");
+        String nome = scann.next();
+        System.out.println("Qual foi a quantidade vendida?");
+        int qtde_vendida = scann.nextInt();
+        System.out.println("Qual é o preço unitário do produto vendido?");
+        double preco_unitario = scann.nextDouble();
+
+        double total = qtde_vendida * preco_unitario;
+        double desconto = 0;
+        double preco_desconto = 0;
+
+        if (qtde_vendida <= 5) {
+            desconto = 0.02;
+            preco_desconto = qtde_vendida * (preco_unitario * 0.98);
+        } else if (qtde_vendida > 5 && qtde_vendida <= 10) {
+            desconto = 0.03;
+            preco_desconto = qtde_vendida * (preco_unitario * 0.97);
+        } else if (qtde_vendida > 10) {
+            desconto = 0.05;
+            preco_desconto = qtde_vendida * (preco_unitario * 0.95);
+        }
+
+        System.out.println("O total bruto gasto em " + nome + " foi de R$ " + total + ", mas com o desconto de "
+                + desconto + "%, o preço agora é de R$ " + preco_desconto);
+    }
+}        

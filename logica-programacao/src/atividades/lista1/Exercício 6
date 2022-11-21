@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Lista1 {
+    public static void main(String[] args) {
+
+        Scanner scann = new Scanner(System.in);
+
+        System.out.println("Qual foi a nota da primeira nota?");
+        double nota1 = scann.nextDouble();
+
+        System.out.println("Qual foi a nota da segunda nota?");
+        double nota2 = scann.nextDouble();
+
+        System.out.println("Qual foi a nota da terceira nota?");
+        double nota3 = scann.nextDouble();
+
+        double nota_final = (((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / (2 + 3 + 5));
+
+        System.out.println("A nota final do aluno foi " + nota_final);
+
+    }
+}
