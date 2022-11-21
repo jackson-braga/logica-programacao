@@ -7,14 +7,14 @@ public class Exercicio08 {
         double n1 = 0, n2 = 0, media = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Avaliação 1:");
-        n1 = scan.nextInt();
+        n1 = scan.nextDouble();
         System.out.println("Avaliação 2:");
-        n2 = scan.nextInt();
+        n2 = scan.nextDouble();
         media = (n1 + n2) / 2;
         if (media >= 6) {
-            System.out.println("Média:" + media + " APROVADO");
+            System.out.printf("Média: %.1f APROVADO", media);
         } else {
-            System.out.println("Média:" + media + " REPROVADO");
+            System.out.printf("Média: %.1f REPROVADO", media);
         }
     }
 }

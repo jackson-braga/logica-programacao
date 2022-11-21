@@ -19,6 +19,6 @@ public class Exercicio07 {
         } else{
             total_maca = maca * 1.00;
         }
-        System.out.println("Valor Total:R$" + total_maca);
+        System.out.printf("Valor Total:R$ %.2f%n", total_maca);
     }
 }

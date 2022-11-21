@@ -7,14 +7,14 @@ public class Exercicio04 {
         double salario = 0, vendas = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Salário:");
-        salario = scan.nextInt();
+        salario = scan.nextDouble();
         while (salario <= 0) {
             System.out.println("Valor do Salário INVALIDO");
             System.out.println("Salário:");
             salario = scan.nextDouble();
         }
         System.out.println("Total de Vendas:");
-        vendas = scan.nextInt();
+        vendas = scan.nextDouble();
         while (salario < 0) {
             System.out.println("Valor do Total de Vendas INVALIDO");
             System.out.println("Total de Vendas:");

@@ -7,12 +7,12 @@ public class Exercicio06 {
         double n1 = 0, n2 = 0, n3 = 0, media = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Nota 1:");
-        n1 = scan.nextInt();
+        n1 = scan.nextDouble();
         System.out.println("Nota 2:");
-        n2 = scan.nextInt();
+        n2 = scan.nextDouble();
         System.out.println("Nota 3:");
-        n3 = scan.nextInt();
+        n3 = scan.nextDouble();
         media = ((n1*2)+(n2*3)+(n3*5))/(2+3+5);
-        System.out.println("Média Final:" + media);
+        System.out.printf("Média Final %.1f:", media);
     }
 }
