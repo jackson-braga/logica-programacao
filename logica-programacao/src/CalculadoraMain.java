@@ -7,20 +7,42 @@ public class CalculadoraMain {
     public static void main(String[] args) {
         int indexOp;
 
-
         Scanner scann = new Scanner(System.in);
+        Calculadora calculo = new Calculadora();
         do {
 
             indexOp = getOperacao();
 
-            if (indexOp < 0 || indexOp > 4) {
+//            switch (indexOp) {
+//                case 1:
+//                case 2:
+//                case 3:
+//                case 4:
+//                    System.out.println("Informe o primeiro número:");
+//                    double valor1 = scann.nextDouble();
+//                    System.out.println("Informe o segundo número:");
+//                    double valor2 = scann.nextDouble();
+//
+//                    double resultado = calculo.calcular(valor1, valor2, indexOp);
+//
+//                    System.out.println("Resultado: " + resultado);
+//                    break;
+//                case 5:
+//                    break;
+//                default:
+//                    System.out.println("\nOperação inexistente!\n");
+//                    break;
+//            }
+
+            if (indexOp < 0 || indexOp > 5) {
 
                 System.out.println("\nOperação inexistente!\n");
                 continue;
 //                break;
+            } else if (indexOp == 5) {
+                String historico = calculo.getHistorico();
+                System.out.println("Histórico: \n" + historico);
             } else if (indexOp != 0) {
-
-                Calculadora calculo = new Calculadora();
                 System.out.println("Informe o primeiro número:");
                 double valor1 = scann.nextDouble();
                 System.out.println("Informe o segundo número:");
@@ -47,6 +69,7 @@ public class CalculadoraMain {
         System.out.println("2 - Subtração");
         System.out.println("3 - Multiplicação");
         System.out.println("4 - Divisão");
+        System.out.println("5 - Histórico");
         System.out.println("0 - Sair");
 
         int indexOp = scann.nextInt();
