@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        //NOTAS DOS ALUNOS
+        System.out.println("Informe sua nota do teste 1");
+        double nota1 = Sc.nextDouble();
+        System.out.println("Informe sua nota do teste 2");
+        double nota2 = Sc.nextDouble();
+        System.out.println("Informe sua nota do teste 3");
+        double nota3 = Sc.nextDouble();
+
+        double mediaFinal = ((nota1*2) + (nota2*3) + (nota3*5)) / (2+3+5);
+        System.out.println("Sua Média final é: " + mediaFinal );
+
+      Sc.close();
+    }
+}
