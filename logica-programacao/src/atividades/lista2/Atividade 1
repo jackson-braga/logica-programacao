@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+
+        System.out.println("informe sua idade: ");
+        double idade = Sc.nextDouble();
+        double doarSangue;
+        if ( idade >= 18 && idade < 68 ){
+            System.out.println("Você pode doar sangue");
+        }else {
+            System.out.println("Você não pode doar sangue");
+        }
+
+
+
+
+
+        }
+    }
