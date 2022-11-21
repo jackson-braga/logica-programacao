@@ -28,7 +28,6 @@ public class Exercicio4 {
             if (idade >= 31 && idade <= 45) quarentaCinco++;
             if (idade >= 46 && idade <= 60) sessenta++;
             if (idade >= 61) sessentaUm++;
-
         }
         //15 menos
         System.out.println("------Faixa etária------\n● Até 15 anos");
