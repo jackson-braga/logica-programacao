@@ -32,11 +32,9 @@ public class Exe08 {
         respostas[4] = scanner.next();
 
         int qtdRespostasPositivas = 0;
-        for (int index = 0; index <= respostas.length; index++) {
+        for (int index = 0; index < respostas.length; index++) {
 
-            String respostaPositiva = "s";
-
-            if (respostas[index] == respostaPositiva) {
+           if (respostas[index].equalsIgnoreCase("S")) {
                 qtdRespostasPositivas++;
 
             }
