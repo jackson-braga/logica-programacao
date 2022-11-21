@@ -17,44 +17,38 @@ public class Exercicio4 {
         Scanner scann = new Scanner(System.in);
         int[] idades = new int[10];
         for (int i = 0; i < idades.length; i++) {
-            System.out.print("Insira a " + (i+1) + "º idade: ");
+            System.out.print("Insira a " + (i + 1) + "º idade: ");
             idades[i] = scann.nextInt();
         }
         //até 15
-        int auxilio=0;
+        int quinze = 0, trinta = 0, quarentaCinco = 0, sessenta = 0, sessentaUm = 0;
+        for (int idade : idades) {
+            if (idade <= 15) quinze++;
+            if (idade >= 16 && idade <= 30) trinta++;
+            if (idade >= 31 && idade <= 45) quarentaCinco++;
+            if (idade >= 46 && idade <= 60) sessenta++;
+            if (idade >= 61) sessentaUm++;
+
+        }
+        //15 menos
         System.out.println("------Faixa etária------\n● Até 15 anos");
-        for (int idade:idades) {
-            if(idade<=15) auxilio++;
-        }
-        System.out.println(auxilio +" pessoas até 15 anos.");
+        System.out.println(quinze + " pessoas até 15 anos.");
         //16 a 30
-        auxilio=0;
+        System.out.println("\n------------------------------------------------");
         System.out.println("● De 16 a 30 anos");
-        for (int idade:idades) {
-            if(idade>=16 && idade<=30) auxilio++;
-        }
-        System.out.println(auxilio +" pessoas de 16 a 30 anos.");
+        System.out.println(trinta + " pessoas de 16 a 30 anos.");
         //31 a 45
-        auxilio=0;
+        System.out.println("\n------------------------------------------------");
         System.out.println("● De 31 a 45 anos");
-        for (int idade:idades) {
-            if(idade>=31 && idade<=45) auxilio++;
-        }
-        System.out.println(auxilio +" pessoas de 31 a 45 anos.");
+        System.out.println(quarentaCinco + " pessoas de 31 a 45 anos.");
         //46 a 60
-        auxilio=0;
+        System.out.println("\n------------------------------------------------");
         System.out.println("● De 46 a 60 anos");
-        for (int idade:idades) {
-            if(idade>=46 && idade<=60) auxilio++;
-        }
-        System.out.println(auxilio +" pessoas de 46 a 60 anos.");
+        System.out.println(sessenta + " pessoas de 46 a 60 anos.");
         //61 acima
-        auxilio=0;
+        System.out.println("\n------------------------------------------------");
         System.out.println("● Acima de 61 anos");
-        for (int idade:idades) {
-            if(idade>=61) auxilio++;
-        }
-        System.out.println(auxilio +" pessoas acima de 61 anos.");
+        System.out.println(sessentaUm + " pessoas acima de 61 anos.");
     }
 
 }
