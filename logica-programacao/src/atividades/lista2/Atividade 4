@@ -1,0 +1,18 @@
+   System.out.print("Digite os 3 ângulos de um triângulo\nÂngulo 1: ");
+        double angulo1 = Sc.nextDouble();
+        System.out.print("Ângulo 2: ");
+        double angulo2 = Sc.nextDouble();
+        System.out.print("Ângulo 3: ");
+        double angulo3 = Sc.nextDouble();
+        if (angulo1 + angulo2 + angulo3 == 180) {
+            if ((angulo1 < 90) && (angulo2 < 90) && (angulo3 < 90)) {
+                System.out.println("Triângulo acutângulo");
+            } else if ((angulo1 > 90) || (angulo2 > 90) || (angulo3 > 90)) {
+                System.out.println("Triângulo obtusângulo");
+            } else if ((angulo1 == 90) || (angulo2 == 90) || (angulo3 == 90)) {
+                System.out.println("Triângulo retângulo");
+            }
+        } else System.out.println("Os Valores informados não formam um triângulo");
+    }
+}
+    
