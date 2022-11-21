@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        //ANO ATUAL E ANO NASCIMENTO
+        System.out.println("Digite o ano atual");
+        double anoAtual = Sc.nextDouble();
+        System.out.println("Digite o ano de seu nascimento");
+        double anoNascimento = Sc.nextDouble();
+
+        //IDADE
+        double idade = anoAtual - anoNascimento;
+
+        //ACIMA DE 18 ANOS VOCÊ PODERÁ VOTAR
+        double podeVotaOuNao;
+          if (idade >= 18){
+              System.out.println("Você pode votar");
+          }else System.out.println("Você não pode votar");
+
+        Sc.close();
+    }
+}
