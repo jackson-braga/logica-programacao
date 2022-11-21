@@ -10,7 +10,7 @@ public class Exercicio03 {
         int idades[] = new int[10];
 
         for (int i = 0; i < idades.length; i++) {
-            idades[i] = aleatorio.nextInt(10, 80);
+            idades[i] = aleatorio.nextInt(10, 80); // serão geradas aleatoriamente as idades;
 
         }
 

@@ -9,7 +9,7 @@ public class Exercicio04 {
         int idades[] = new int[10];
 
         for (int i = 0; i < idades.length; i++) {
-            idades[i] = aleatorio.nextInt(10, 80);
+            idades[i] = aleatorio.nextInt(10, 80); // serão geradas aleatoriamente as idades;
         }
         int cont15 = 0;
         int cont30 = 0;
@@ -19,7 +19,7 @@ public class Exercicio04 {
 
         for (int i = 0; i < idades.length; i++) {
             if (idades[i] <= 15) {
-                cont15++;  // = cont15 + 1;
+                cont15++;
             } else if (idades[i] > 15 && idades[i] <= 30) {
                 cont30++;
             } else if (idades[i] > 30 && idades[i] <= 45) {

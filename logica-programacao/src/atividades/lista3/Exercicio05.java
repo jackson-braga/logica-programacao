@@ -13,9 +13,9 @@ public class Exercicio05 {
 
         for (contA = 1; contA <= linhas; contA++) {
 
-            for (contB = linhas; contB >= contA; contB--)
+            for (contB = 1; contB <= contA; contB++)
                 System.out.print("*");
-            System.out.print("\n");// quebra linha
+            System.out.print("\n");
         }
 
 
