@@ -1,8 +1,6 @@
 package atividades.lista3;
 
 import java.util.Random;
-import java.util.Scanner;
-import java.util.logging.SocketHandler;
 
 public class Exe03 {
     public static void main(String[] args) {
