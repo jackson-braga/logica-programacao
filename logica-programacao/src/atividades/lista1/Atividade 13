@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        String combustivel =" ";
+        double litros;
+        double preco = 0;
+        double alcool = 3.69;
+        double gasolina = 4.79;
+
+        do {
+            System.out.println("Digite A para álcool e G para gasolina");
+            combustivel = Sc.next();
+            if(!combustivel.equals("a")&&!combustivel.equals("g")&&!combustivel.equals("A")&&!combustivel.equals("G"))
+                System.out.println("Opção desconhecida");
+           }while(!combustivel.equals("a")&&!combustivel.equals("g")&&!combustivel.equals("A")&&!combustivel.equals("G"));
+                System.out.println("Quantidade de litros desejada:");
+                 litros = Sc.nextDouble();
+            if(combustivel.equals("A") ||combustivel.equals("a")){
+               if(litros<20)
+                preco = litros*alcool*0.98;
+            else
+                preco = litros*alcool*0.95;
+        }
+            if(combustivel.equals("G") ||combustivel.equals("g")){
+              if(litros<20)
+                preco = litros*gasolina*0.97;
+              else
+                preco = litros*gasolina*0.94;
+        }
+        System.out.printf("\nO valor final é  R$" + "%.2f",preco);
+
+        Sc.close();
+    }
+
+}
