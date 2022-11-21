@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        System.out.println("Informe o ano atual: ");
+        int anoAtual = Sc.nextInt();
+
+        System.out.println("Informe o ano de seu nascimento: ");
+        int anoNascimento = Sc.nextInt();
+
+        System.out.println("Informe o ano de entrada na empresa");
+        int anoIngressoEmpresa = Sc.nextInt();
+
+        int idade = anoAtual - anoNascimento;
+        int tempoTrabalho = anoAtual - anoIngressoEmpresa;
+        if ((idade >= 65) || (tempoTrabalho >= 30) || (idade >= 60 && tempoTrabalho >= 25)) {
+            System.out.println("aposentadoria Liberada");
+        } else {
+            System.out.println("aposentadoria Recusada");
+
+
+            Sc.close();
+        }
+    }
+}
