@@ -38,6 +38,7 @@ public class Exe08 {
 
             if (respostas[index] == respostaPositiva) {
                 qtdRespostasPositivas++;
+
             }
 
         }
