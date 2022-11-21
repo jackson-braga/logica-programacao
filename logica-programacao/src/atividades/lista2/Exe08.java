@@ -54,7 +54,7 @@ public class Exe08 {
 
         } else {
             System.out.println("Você é Inocente.");
-            
+
         }
 
     }
