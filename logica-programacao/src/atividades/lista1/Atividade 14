@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        System.out.println("Informe o nome do produto: ");
+        String nomeProduto = Sc.next();
+
+        System.out.println("Informe a quantidade desejada: ");
+        double quantidade = Sc.nextDouble();
+
+        System.out.println("Informe o preço da unidade deste produto: ");
+        double precoUnidade = Sc.nextDouble();
+
+        double precoTotal =  quantidade * precoUnidade;
+        System.out.println("O preço total do produto " + nomeProduto + " é de " + precoTotal);
+
+        double desconto;
+        if (quantidade <= 5) {
+            desconto = 0.02;
+        } else if (quantidade > 5 && quantidade <= 10) {
+            desconto = 0.03;
+        } else {
+            desconto = 0.05;
+        }
+        System.out.println("O desconto é " + (desconto * 100) + " porcento");
+        double totalComDesconto = precoTotal - (precoTotal * desconto);
+        System.out.println("O valor total com desconto é " + totalComDesconto);
+
+    }
+
+}
