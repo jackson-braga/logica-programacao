@@ -8,11 +8,20 @@ public class Exercicio5 {
      * Celsius (baseado na fórmula abaixo):
      * Observação: Para testar se a sua resposta está correta saiba que 100ºC = 212F
      */
+    public static final String PERGUNTA = "Informe quantos graus em Fahrenheit: ";
+    public static final String RESPOSTA_RETORNO = "\n%.1fº Celsius";
     public static void main(String[] args) {
-        Scanner scann = new Scanner(System.in);
-        System.out.print("Informe quantos graus em Fahrenheit: ");
-        float fGraus = scann.nextFloat();
+        float fGraus;
+        System.out.print(PERGUNTA);
+        fGraus = getValor();
+        System.out.printf(RESPOSTA_RETORNO, conversorGraus(fGraus));
+    }
+    public static float getValor() {
+        float valor = new Scanner(System.in).nextFloat();
+        return valor;
+    }
+    public static float conversorGraus(float fGraus){
         float cGraus = ((fGraus-32)/9)*5;
-        System.out.printf("\n%.2fº Celsius", cGraus);
+        return cGraus;
     }
 }
