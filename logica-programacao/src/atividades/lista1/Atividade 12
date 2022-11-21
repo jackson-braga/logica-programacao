@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        System.out.println("Informe o tamanho do lado A");
+        double ladoA = Sc.nextDouble();
+        System.out.println("Informe o tamanho do lado B");
+        double ladoB = Sc.nextDouble();
+        System.out.println("Informe o tamanho do lado C");
+        double ladoC = Sc.nextDouble();
+
+        boolean LadoAboolean = (ladoA < (ladoB + ladoC));
+        boolean LadoBboolean = (ladoB < (ladoA + ladoC));
+        boolean LadoCboolean = (ladoC < (ladoB + ladoA));
+        if (LadoAboolean && LadoBboolean && LadoCboolean) {
+            System.out.println("É um triângulo");
+        } else {
+            System.out.println("Não é um triângulo");
+
+            Sc.close();
+        }
+    }
+    }
