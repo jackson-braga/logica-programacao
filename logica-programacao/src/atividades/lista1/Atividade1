@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+    Scanner Sc = new Scanner(System.in);
+
+    //ENTRADA DA ALTURA
+    System.out.println("Digite a altura do retangulo");
+    double altura = Sc.nextDouble();
+
+    // ENTRADA DA BASE
+    System.out.println("Digite a base do retangulo");
+    double base = Sc.nextDouble();
+
+    // RESULTADO DA AREA
+    double area = altura * base;
+    System.out.println("A area do retangulo é: " + area);
+
+
+
+  Sc.close();
+    }
+}
