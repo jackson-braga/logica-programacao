@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+
+        System.out.println("Informe a quantidade maxima do estoque: ");
+         double quantidadeMaxima = Sc.nextDouble();
+        System.out.println("Informe a quantidade atual do estoque: ");
+         double quantidadeAtual = Sc.nextDouble();
+        System.out.println("Informe a quantidade mínima do estoque ");
+         double quantidadeMinima = Sc.nextDouble();
+
+
+         double quantidadeMedia = ((quantidadeMaxima + quantidadeMinima) / 2);
+        System.out.println(quantidadeMedia);
+
+         double quantidadeDeCompra;
+                 if (quantidadeAtual >= quantidadeMedia){
+                     System.out.println("Não Efetuar a compra");
+                 }else System.out.println("Efetuar a compra");
+
+
+        Sc.close();
+    }
+}
