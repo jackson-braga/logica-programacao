@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+    Scanner Sc = new Scanner(System.in);
+
+        System.out.print("Informe a sua Idade ");
+        int idade = Sc.nextInt();
+        System.out.print("Informe qual o Mês da sua idade atual: ");
+        int meses = Sc.nextInt();
+        System.out.print("Informe quantos o dia do mes: ");
+        int dias = Sc.nextInt();
+
+        int DiasVividos = (idade* 365) + (meses * 30) + dias;
+        System.out.println("Voce viveu " + DiasVividos + " dias" );
+
+  Sc.close();
+    }
+}
