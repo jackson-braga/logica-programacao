@@ -1,1 +1,1 @@
-# santander-coders-locia-programacao
+# santander-coders-logica-programacao
