@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        // N.  ELEITORES
+        System.out.println("Informe o número total de eleitores: ");
+        double eleitores = Sc.nextDouble();
+        // N. VOTOS EM BRANCO
+        System.out.println("Informe o número de votos em branco: ");
+        double votosEmBranco = Sc.nextDouble();
+        // N. VOTOS NULOS
+        System.out.println("Informe o número de votos nulos: ");
+        double votosNulo = Sc.nextDouble();
+        // . VOTOS VALIDOS
+        System.out.println("Informe o número de votos válidos: ");
+        double votosValidos = Sc.nextDouble();
+
+        //% VOTOS BRANCO
+        System.out.print("A % de votos em branco é ");
+        System.out.println((votosEmBranco / eleitores) * 100);
+
+        //% VOTOS NULO
+        System.out.print("A % de votos nulo é ");
+        System.out.println((votosNulo / eleitores) * 100);
+
+        //% VOTOS VALIDOS
+        System.out.print("A % de votos válidos é ");
+        System.out.println((votosValidos / eleitores) * 100);
+
+        Sc.close();
+    }
+}
