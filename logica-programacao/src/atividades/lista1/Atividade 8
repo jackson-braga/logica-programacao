@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        //NOTAS DO ALUNO
+        System.out.println("Informe a nota da avaliação 1");
+        double nota1 = Sc.nextDouble();
+        System.out.println("Informe a nota da avaliação 2");
+        double nota2 = Sc.nextDouble();
+
+        //MEDIA FINAL DO ALUNO
+        double media = ((nota1 + nota2) / 2);
+        System.out.println("Sua média final é: " + media);
+
+
+
+        double aprovacaoOuReprovacao;
+        if (media >= 6){
+            System.out.println("Você foi aprovado");
+        }else System.out.println("Você foi reprovado");
+
+
+        Sc.close();
+    }
+}
