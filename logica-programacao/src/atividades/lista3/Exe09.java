@@ -9,7 +9,7 @@ public class Exe09 {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            
+
             System.out.println("Digite um número maior que 0: ");
             valor = scanner.nextInt();
 
