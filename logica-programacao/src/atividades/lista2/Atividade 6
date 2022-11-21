@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        System.out.println("Digite a primeira nota: ");
+        double nota1 = Sc.nextDouble();
+        System.out.println("Digite a segunda nota: ");
+        double nota2 = Sc.nextDouble();
+        double media = (nota1 + nota2) / 2;
+        char conceito = 0;
+        String mensagem = "As notas foram: \nNota 1: " + nota1 + "\nNota 2: " + nota2 + "\nMédia: " + media;
+
+        if (media <= 7.5 && media >= 0) {
+            if (media <= 4) {
+                conceito = 'E';
+            } else if (media > 4 && media <= 6) {
+                conceito = 'D';
+            } else if (media > 6 && media <= 7.5) {
+                conceito = 'C';
+            }
+            mensagem = mensagem + "\n" + "REPROVADO -> " + conceito;
+        } else if (media > 7.5 && media <= 10) {
+            if (media > 7.5 && media <= 9) {
+                conceito = 'B';
+            } else if (media > 9 && media <= 10) {
+                conceito = 'A';
+            }
+            mensagem = mensagem + "\n" + "APROVADO -> " + conceito;
+        } else {
+            System.out.println("O valor da média fora dos parâmetros");
+            return;
+        }
+        System.out.println(mensagem);
+    }
+}
