@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+
+        System.out.println("Digite uma letra");
+        String letra = Sc.next().toLowerCase();
+        
+        
+        if (letra.length() > 1) {
+            System.out.println("Digite somente uma letra");
+            return;
+        }
+        if (letra.matches("[^A-Za-z_]") == true) {
+            System.out.println(letra + " não é uma letra");
+            return;
+        }
+        char[] vogais = {'a', 'e', 'i', 'o', 'u'};
+        for (int i = 0; i < vogais.length; i++) {
+            if (letra.equals(String.valueOf(vogais[i]))) {
+                System.out.println("A Letra digitada é uma vogal");
+                return;
+            }
+        }
+        System.out.println(" A letra digitada é uma consoante");
+    }
+}
