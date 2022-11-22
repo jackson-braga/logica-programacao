@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner Sc = new  Scanner(System.in);
+
+        int altura = Sc.nextInt();
+        String triangulo = "*";
+
+        if (altura < 0) {
+            for (int i = altura; i < 0; i++) {
+                System.out.println(triangulo);
+                triangulo = triangulo + "*";
+            }
+        } else if (altura > 0) {
+            for (int i = 1; i <= altura; i++) {
+                System.out.println(triangulo);
+                triangulo = triangulo + "*";
+            }
+        } else System.out.println("Tamanho zero informado!");
+
+    }
+
+}
