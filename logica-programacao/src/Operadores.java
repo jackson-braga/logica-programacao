@@ -1,5 +1,3 @@
-import com.sun.jdi.connect.Connector;
-
 public class Operadores {
 
     public static void main(String[] args) {
