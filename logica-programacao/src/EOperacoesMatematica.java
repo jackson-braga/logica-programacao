@@ -3,4 +3,6 @@ public enum EOperacoesMatematica {
     SUBTRACAO,
     DIVISAO,
     MULTIPLICACAO;
+
+
 }
