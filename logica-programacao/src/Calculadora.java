@@ -1,10 +1,17 @@
 import java.util.Scanner;
 
 public class Calculadora {
+    public static final int SOMA = 10;
     private String[] historicoArray = new String[8];
+    private char[][] matris = new char[3][3];
 
-    public double calcular(double valor1, double valor2, int operacao) {
+    public double calcular(double valor1, double valor2, EOperacoesMatematica operacao) {
 
+        for (int i = 0; i < matris.length; i++){
+            for(int j = 0; j < matris.length; j ++) {
+                char c = matris[i][j];
+            }
+        }
         // public: todos podem ver
         // private: somente a classe consegue visualizar
         // protect: a classe e os filhos podem visualizar
@@ -14,16 +21,16 @@ public class Calculadora {
         double resultado = 0;
 
         switch (operacao) {
-            case 1:
+            case SOMA:
                 resultado = somar(valor1, valor2);
                 break;
-            case 2:
+            case SUBTRACAO:
                 resultado = subtrair(valor1, valor2);
                 break;
-            case 3:
+            case MULTIPLICACAO:
                 resultado = multiplicar(valor1, valor2);
                 break;
-            case 4:
+            case DIVISAO:
                 resultado = dividir(valor1, valor2);
                 break;
             default:
@@ -51,31 +58,41 @@ public class Calculadora {
         return valor1 / valor2;
     }
 
-    private void setHistorico(double valor1, double valor2, int operacao, double resultado) {
+    private void setHistorico(double valor1, double valor2, EOperacoesMatematica operacao, double resultado) {
         String historico = montarHistorico(valor1, valor2, operacao, resultado);
 
-        for (int i = 0; i < historicoArray.length; i++) {
-            if(historicoArray[i] == null) {
-                historicoArray[i] = historico;
-                break;
+        int ultimoIdx = historicoArray.length - 1;
+        if(historicoArray[ultimoIdx] != null) {
+            for (int i = 1; i < historicoArray.length; i++) {
+                historicoArray[i-1] = historicoArray[i];
+                if (i == ultimoIdx) {
+                    historicoArray[i] = historico;
+                }
+            }
+        } else {
+            for (int i = 0; i < historicoArray.length; i++) {
+                if(historicoArray[i] == null) {
+                    historicoArray[i] = historico;
+                    break;
+                }
             }
         }
     }
 
-    private static String montarHistorico(double valor1, double valor2, int operacao, double resultado) {
+    private String montarHistorico(double valor1, double valor2, EOperacoesMatematica operacao, double resultado) {
         String historico = String.valueOf(valor1);
 
         switch (operacao) {
-            case 1:
+            case SOMA:
                 historico += " + ";
                 break;
-            case 2:
+            case SUBTRACAO:
                 historico += " - ";
                 break;
-            case 3:
+            case MULTIPLICACAO:
                 historico += " * ";
                 break;
-            case 4:
+            case DIVISAO:
                 historico += " / ";
                 break;
             default:
@@ -91,11 +108,22 @@ public class Calculadora {
     public String getHistorico() {
         // 2 * 2 = 4
         // 1 + 1 = 2
-        String historico = "";
-        for (int i = 0; i < historicoArray.length; i++) {
-            historico += historicoArray[i];
-            historico += "\n";
+        String historicoCompleto = "";
+        for (String historico : historicoArray) {
+            if(historico != null) {
+                historicoCompleto += historico;
+                historicoCompleto += "\n";
+            }
         }
-        return historico;
+
+//        for (int i = 0; i < historicoArray.length; i++) {
+//            String historico = historicoArray[i];
+//            if(historico != null) {
+//                historicoCompleto += historico;
+//                historicoCompleto += "\n";
+//            }
+//        }
+
+        return historicoCompleto;
     }
 }
