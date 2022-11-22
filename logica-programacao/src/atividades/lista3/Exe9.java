@@ -11,19 +11,19 @@ public class Exe9 {
 //        aceito somente valores maiores que 0 para N. Caso o valor informado (para N) não seja maior que 0,
 //        imprima “VALOR INVÁLIDO” e solicite para ler o valor de N novamente.
 
-        int N;
+        int n;
         Scanner input = new Scanner(System.in);
 
         do {
             System.out.println("Digite o valor de N");
-            N = input.nextInt();
-            if (N <= 0) {
+            n = input.nextInt();
+            if (n <= 0) {
                 System.out.println("VALOR INVÁLIDO");
             } else {
-                for (int i = 1; i <= N; i++) {
+                for (int i = 1; i <= n; i++) {
                     System.out.println(i);
                 }
             }
-        } while (N <= 0);
+        } while (n <= 0);
     }
 }
