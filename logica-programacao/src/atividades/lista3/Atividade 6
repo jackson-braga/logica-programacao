@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+
+        System.out.println("Menu de opções:\n\n" +
+                "1 - Média Aritmética\n" +
+                "2 - Média Ponderada\n" +
+                "3 - Sair");
+        int opcao = scan.nextInt();
+        double nota1, nota2, nota3, media, pesoNota1, pesoNota2, pesoNota3;
+
+        switch (opcao) {
+            case 1:
+                System.out.println("Digite a primeira nota: ");
+                nota1 = scan.nextDouble();
+                System.out.println("Digite a segunda nota: ");
+                nota2 = scan.nextDouble();
+                media = (nota1 + nota2) / 2;
+                System.out.printf("A média aritmética é: %.2f", media);
+                break;
+            case 2:
+                System.out.println("Digite a primeira nota: ");
+                nota1 = scan.nextDouble();
+                System.out.println("Digite o peso da primeira nota: ");
+                pesoNota1 = scan.nextDouble();
+                System.out.println("Digite a segunda nota: ");
+                nota2 = scan.nextDouble();
+                System.out.println("Digite o peso da segunda nota: ");
+                pesoNota2 = scan.nextDouble();
+                System.out.println("Digite a terceira nota: ");
+                nota3 = scan.nextDouble();
+                System.out.println("Digite o peso da terceira nota: ");
+                pesoNota3 = scan.nextDouble();
+                media = ((nota1 * pesoNota1) + (nota2 * pesoNota2) + (nota3 * pesoNota3)) / (pesoNota1 + pesoNota2 + pesoNota3);
+                System.out.printf("A média ponderada é: %.2f", media);
+                break;
+            case 3:
+                return;
+            default:
+                System.out.println("Opção inválida");
+                return;
+        }
+    }
+}
+
+
+
+
