@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        char condicao = 'S';
+        double nota1 = -1, nota2, media = 0;
+
+        do {
+            System.out.println("Digite a primeira nota: ");
+            nota1 = scan.nextDouble();
+            if (nota1 < 0 || nota1 > 10) {
+                System.out.println("O valor da nota deve ser de 0 a 10");
+                continue;
+            }
+
+            System.out.println("Digite a segunda nota: ");
+            nota2 = scan.nextDouble();
+            if (nota2 < 0 || nota2 > 10) {
+                System.out.println("O valor da nota deve ser de 0 a 10");
+                continue;
+            }
+
+            media = (nota1 + nota2) / 2;
+            System.out.printf("A média das notas é: %.2f %n", media);
+            System.out.println("NOVO CÁLCULO (S/N)?");
+            condicao = scan.next().toUpperCase().charAt(0);
+        } while (condicao == 'S');
+        System.out.println("Programa encerrado!");
+
+    }
+}
+
+
