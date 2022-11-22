@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Atividades {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Informe  o primeiro número: ");
+        double n1 = scan.nextDouble();
+        System.out.println("Informe o segundo número: ");
+        double n2 = scan.nextDouble();
+        System.out.println("Informe o terceiro número: ");
+        double n3 = scan.nextDouble();
+
+        System.out.println("Ordem digitada: " + n1 + " " + n2 + " " + n3);
+
+        if (n1 < n2 && n1 < n3) {
+            if (n2 < n3) {
+                System.out.println("Ordem crescente: " + n1 + " " + n2 + " " + n3);
+            } else if (n3 < n2) {
+                System.out.println("Ordem crescente: " + n1 + " " + n3 + " " + n2);
+            }
+        } else if (n2 < n1 && n2 < n3) {
+            if (n1 < n3) {
+                System.out.println("Ordem crescente: " + n2 + " " + n1 + " " + n3);
+            } else if (n3 < n1) {
+                System.out.println("Ordem crescente: " + n2 + " " + n3 + " " + n1);
+            }
+        } else if (n3 < n1 && n3 < n2) {
+            if (n1 < n2) {
+                System.out.println("Ordem crescente: " + n3 + " " + n1 + " " + n2);
+            } else if (n2 < n1) {
+                System.out.println("Ordem crescente: " + n3 + " " + n2 + " " + n1);
+            }
+        }
+
+        if (n1 > n2 && n1 > n3) {
+            if (n2 > n3) {
+                System.out.println("Ordem decrescente: " + n1 + " " + n2 + " " + n3);
+            } else if (n3 > n2) {
+                System.out.println("Ordem decrescente: " + n1 + " " + n3 + " " + n2);
+            }
+        } else if (n2 > n1 && n2 > n3) {
+            if (n1 > n3) {
+                System.out.println("Ordem decrescente: " + n2 + " " + n1 + " " + n3);
+            } else if (n3 > n1) {
+                System.out.println("Ordem decrescente: " + n2 + " " + n3 + " " + n1);
+            }
+        } else if (n3 > n1 && n3 > n2) {
+            if (n1 > n2) {
+                System.out.println("Ordem decrescente: " + n3 + " " + n1 + " " + n2);
+            } else if (n2 > n1) {
+                System.out.println("Ordem decrescente: " + n3 + " " + n2 + " " + n1);
+            }
+        }
+    }
+}
