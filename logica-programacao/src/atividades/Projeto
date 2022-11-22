@@ -1,0 +1,178 @@
+package Projeto;
+
+import java.util.Scanner;
+
+public class JogoDaVelha {
+
+    static char velha[][] = new char[3][3];
+    static int auxiliar[][] = new int[3][3];
+
+    public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+        System.out.println("Digite a quanditade de jogos desejados");
+        int jogos = scan.nextInt();
+        int vitoria1 = 0;
+        int vitoria2 = 0;
+        int empate = 0;
+        int vitorias[] = new int[jogos];
+        int partida = 0;
+        int validacao;
+        int jogador=0;
+        int linha=0;
+        int coluna=0;
+        int termino = 0;
+        do{
+            zera();
+            do{
+            desenha();
+            //jogada do jogador 1
+                System.out.println("Digite a sua jogada jogador 1");
+                jogador=1;
+                System.out.println("Digite a linha");
+                linha = scan.nextInt();
+                linha--;
+                System.out.println("Digite a coluna");
+                coluna = scan.nextInt();
+                coluna--;
+            validacao = jogada(jogador,linha,coluna);
+            if(validacao==0) {
+                System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
+            }
+            //jogada do jogador 2
+                desenha();
+                System.out.println("Digite a sua jogada jogador 2");
+                jogador=2;
+                System.out.println("Digite a linha");
+                linha = scan.nextInt();
+                linha--;
+                System.out.println("Digite a coluna");
+                coluna = scan.nextInt();
+                coluna--;
+                validacao = jogada(jogador,linha,coluna);
+                if(validacao==0) {
+                    System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
+                }
+            termino=resultado(partida);
+            if (termino!=0)
+            vitorias[partida] = termino;
+            }while(termino == 0);
+        partida++;
+        }while(jogos < partida);
+        for(int i = 0;i < jogos;i++){
+            if(vitorias[i]==1)
+                vitoria1++;
+            if(vitorias[i]==2)
+                vitoria2++;
+            if(vitorias[i]==3)
+                empate++;
+            System.out.println("Foram disputados "+jogos+" jogos");
+            System.out.println("O jogador 1 ganhou "+vitoria1+" jogos");
+            System.out.println("O jogador 2 ganhou "+vitoria2+" jogos");
+            if(empate>0)
+            System.out.println("Foram empatados "+empate+" jogos");
+        }
+    }
+
+
+    private static void zera() {
+       for(int linha = 0; linha < auxiliar.length; linha++){
+           for(int coluna = 0; coluna < velha[linha].length; coluna++){
+               velha[linha][coluna] = ' ';
+               auxiliar[linha][coluna] = 0;
+           }
+       }
+
+    }
+
+    private static void desenha() {
+        for(int linha = 0; linha < velha.length; linha++) {
+            if(linha==0)
+                System.out.println("\n   1   2   3 ");
+            for (int coluna = 0; coluna < velha[linha].length; coluna++) {
+                if(coluna==0)
+                    System.out.printf((linha+1)+" ");
+                if(coluna==1)
+                System.out.printf(" | " + velha[linha][coluna] + " |");
+                    else
+                        System.out.printf(" " + velha[linha][coluna]);
+
+            }
+            if(linha < (velha.length-1))
+            System.out.println("\n  ----------- ");
+        }
+        System.out.println();
+    }
+
+    private static int jogada(int jogador, int linha, int coluna) {
+        if(auxiliar[linha][coluna]!=0)
+            return 0;
+        if (jogador == 1){
+            velha[linha][coluna] = 'X';
+            auxiliar[linha][coluna] = 1;
+        }
+        else {
+            velha[linha][coluna] = 'O';
+            auxiliar[linha][coluna] = 2;
+        }
+        return 1;//Verificar o erro com base na aula de quarta
+
+    }
+
+    private static int resultado(int partida) {
+        //Verificação linha
+        if(auxiliar[0][0] == auxiliar[0][1] && auxiliar[0][1] == auxiliar[0][2]){
+            if(auxiliar[0][0] == 1)
+                return 1;
+            if(auxiliar[0][0] == 2)
+                return 2;
+        }
+        if(auxiliar[1][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[1][2]) {
+            if (auxiliar[1][0] == 1)
+                return 1;
+            if (auxiliar[1][0] == 2)
+                return 2;
+        }
+        if(auxiliar[2][0] == auxiliar[2][1] && auxiliar[2][1] == auxiliar[2][2]){
+            if(auxiliar[2][0] == 1)
+                return 1;
+            if(auxiliar[2][0] == 2)
+                return 2;
+        }
+        //Verificação coluna
+        if(auxiliar[0][0] == auxiliar[1][0] && auxiliar[1][0] == auxiliar[2][0]){
+            if(auxiliar[0][0] == 1)
+                return 1;
+            if(auxiliar[0][0] == 2)
+                return 2;
+        }
+        if(auxiliar[0][1] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][1]) {
+            if (auxiliar[0][1] == 1)
+                return 1;
+            if (auxiliar[0][1] == 2)
+                return 2;
+        }
+        if(auxiliar[0][2] == auxiliar[1][2] && auxiliar[1][2] == auxiliar[2][2]){
+            if(auxiliar[0][2] == 1)
+                return 1;
+            if(auxiliar[0][2] == 2)
+                return 2;
+        }
+        //Verificação diagonal
+        if(auxiliar[0][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][2]){
+            if(auxiliar[1][1] == 1)
+                return 1;
+            if(auxiliar[1][1] == 2)
+                return 2;
+        }
+        if(auxiliar[2][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[0][2]) {
+            if (auxiliar[1][1] == 1)
+                return 1;
+            if (auxiliar[1][1] == 2)
+                return 2;
+            //Condição de velha
+    if(auxiliar[0][0]!=0&&auxiliar[0][1]!=0&&auxiliar[0][2]!=0&&auxiliar[1][0]!=0&&auxiliar[1][1]!=0&&auxiliar[1][2]!=0&&auxiliar[2][0]!=0&&auxiliar[2][1]!=0&&auxiliar[2][2]!=0)
+            return 3;
+    }
+        return 0;
+}
+}
