@@ -9,18 +9,21 @@ public class CalculadoraMain {
 
 
         Scanner scann = new Scanner(System.in);
+        Calculadora calculo = new Calculadora();
         do {
 
             indexOp = getOperacao();
 
-            if (indexOp < 0 || indexOp > 4) {
+
+            if (indexOp < 0 || indexOp > 5 || indexOp != Calculadora.SOMA) {
 
                 System.out.println("\nOperação inexistente!\n");
                 continue;
 //                break;
+            } else if (indexOp == 5) {
+                String historico = calculo.getHistorico();
+                System.out.println("Histórico: \n" + historico);
             } else if (indexOp != 0) {
-
-                Calculadora calculo = new Calculadora();
                 System.out.println("Informe o primeiro número:");
                 double valor1 = scann.nextDouble();
                 System.out.println("Informe o segundo número:");
@@ -47,10 +50,14 @@ public class CalculadoraMain {
         System.out.println("2 - Subtração");
         System.out.println("3 - Multiplicação");
         System.out.println("4 - Divisão");
+        System.out.println("5 - Histórico");
         System.out.println("0 - Sair");
 
+//        for (EOperacoesMatematica operacao : EOperacoesMatematica.values()) {
+//            System.out.println(operacao.ordinal() + " - " + operacao.name());
+//        }
+
         int indexOp = scann.nextInt();
-        scann.close();
         return indexOp;
     }
 }

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Calculadora {
+    public static final int SOMA = 1;
+    private String[] historicoArray = new String[8];
 
     public double calcular(double valor1, double valor2, int operacao) {
 
@@ -14,7 +16,7 @@ public class Calculadora {
         double resultado = 0;
 
         switch (operacao) {
-            case 1:
+            case SOMA:
                 resultado = somar(valor1, valor2);
                 break;
             case 2:
@@ -30,6 +32,7 @@ public class Calculadora {
                 break;
         }
 
+        setHistorico(valor1, valor2, operacao, resultado);
         return resultado;
 
 
@@ -49,6 +52,56 @@ public class Calculadora {
 
     private double dividir(double valor1, double valor2) {
         return valor1 / valor2;
+    }
+
+    private void setHistorico(double valor1, double valor2, int operacao, double resultado) {
+        String historico = montarHistorico(valor1, valor2, operacao, resultado);
+
+        for(int i = 0; i < historicoArray.length; i++) {
+            if (historicoArray[i] == null) {
+                historicoArray[i] = historico;
+                break;
+            }
+        }
+    }
+
+    private String montarHistorico(double valor1, double valor2, int operacao, double resultado) {
+        String historico = String.valueOf(valor1);
+        historico += "";
+
+        switch (operacao) {
+            case SOMA:
+                historico += " + ";
+                break;
+            case 2:
+                historico += " - ";
+                break;
+            case 3:
+                historico += " * ";
+                break;
+            case 4:
+                historico += " / ";
+                break;
+            default:
+                break;
+        }
+
+        historico += String.valueOf(valor2);
+        historico += " = ";
+        historico += String.valueOf(resultado);
+        return historico;
+    }
+
+    public String getHistorico() {
+        String historicoCompleto = "";
+        for (int i = 0; i < historicoArray.length; i++) {
+            String historico = historicoArray[i];
+            if (historico != null) {
+                historicoCompleto += historico;
+                historicoCompleto += "\n";
+            }
+        }
+        return historicoCompleto;
     }
                                                                                                                    
 }
