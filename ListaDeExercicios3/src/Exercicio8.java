@@ -19,12 +19,14 @@ public class Exercicio8 {
             double nota1 = scann.nextDouble();
             if (nota1 < 0 || nota1 > 10) {
                 System.out.println("Digite uma opção válida. Valores de 0 a 10.");
+                break;
             }
 
             System.out.println("Digite sua segunda nota: ");
             double nota2 = scann.nextDouble();
             if (nota2 < 0 || nota2 > 10) {
                 System.out.println("Digite uma opção válida. Valores de 0 a 10.");
+                break;
             }
 
             double resultado = (nota1 + nota2) / 2;
