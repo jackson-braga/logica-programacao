@@ -1,9 +1,10 @@
 package atividades.lista3;
 
 import java.util.Scanner;
-public class Exercicio06xx {
+public class Exercicio06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
 
         System.out.println("1. Média aritmética\n" +
                 "2. Média ponderada\n" +
@@ -33,6 +34,8 @@ public class Exercicio06xx {
                 break;
             case 3:
                 System.out.println("Programa finalizado.");
+                break;
+            default:
                 break;
 
         }
