@@ -10,17 +10,16 @@ public class JogoDaVelha {
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
         System.out.println("Digite a quanditade de jogos desejados");
-        int jogos = scan.nextInt();
+        int jogos = scan.nextInt();//Exeption para 0 e para negativo
         int vitoria1 = 0;
         int vitoria2 = 0;
         int empate = 0;
-        int vitorias[] = new int[jogos];
         int partida = 0;
-        int validacao;
+        int validacao;//Exeption entra aqui para verificar a jogada se foi valida ou se ja foi escolido o campo
         int jogador=0;
         int linha=0;
         int coluna=0;
-        int termino = 0;
+        int termino = 0;// Controla o fim do jogo
         do{
             zera();
             do{
@@ -38,6 +37,27 @@ public class JogoDaVelha {
             if(validacao==0) {
                 System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
             }
+                termino=resultado(partida);
+                if (termino!=0) {
+                    System.out.println("\n********************************");
+                    desenha();
+                    System.out.println("\n********************************\n");
+                    if (termino == 1) {
+                        vitoria1++;
+                        System.out.println("Jogador 1 venceu");
+                        break;
+                    }
+                    if (termino == 2) {
+                        vitoria2++;
+                        System.out.println("Jogador 2 venceu");
+                        break;
+                    }
+                    if (termino == 3) {
+                        empate++;
+                        System.out.println("Empate");
+                        break;
+                    }
+                }
             //jogada do jogador 2
                 desenha();
                 System.out.println("Digite a sua jogada jogador 2");
@@ -53,25 +73,37 @@ public class JogoDaVelha {
                     System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
                 }
             termino=resultado(partida);
-            if (termino!=0)
-            vitorias[partida] = termino;
+            if (termino!=0) {
+                System.out.println("\n********************************");
+                desenha();
+                System.out.println("\n********************************\n");
+                if (termino == 1) {
+                    vitoria1++;
+                    System.out.println("Jogador 1 venceu");
+                }
+                if (termino == 2) {
+                    vitoria2++;
+                    System.out.println("Jogador 2 venceu");
+                }
+                if (termino == 3) {
+                    empate++;
+                    System.out.println("Empate");
+                }
+                }
             }while(termino == 0);
         partida++;
-        }while(jogos < partida);
-        for(int i = 0;i < jogos;i++){
-            if(vitorias[i]==1)
-                vitoria1++;
-            if(vitorias[i]==2)
-                vitoria2++;
-            if(vitorias[i]==3)
-                empate++;
+        if(jogos == partida && vitoria1 == vitoria2) {
+            System.out.println("O jogo está empatado agora será a partida de desempate");
+            jogos++;
+        }
+        }while(partida < jogos);
             System.out.println("Foram disputados "+jogos+" jogos");
             System.out.println("O jogador 1 ganhou "+vitoria1+" jogos");
             System.out.println("O jogador 2 ganhou "+vitoria2+" jogos");
             if(empate>0)
             System.out.println("Foram empatados "+empate+" jogos");
         }
-    }
+
 
 
     private static void zera() {
@@ -169,10 +201,11 @@ public class JogoDaVelha {
                 return 1;
             if (auxiliar[1][1] == 2)
                 return 2;
+        }
             //Condição de velha
     if(auxiliar[0][0]!=0&&auxiliar[0][1]!=0&&auxiliar[0][2]!=0&&auxiliar[1][0]!=0&&auxiliar[1][1]!=0&&auxiliar[1][2]!=0&&auxiliar[2][0]!=0&&auxiliar[2][1]!=0&&auxiliar[2][2]!=0)
             return 3;
-    }
+
         return 0;
 }
 }
