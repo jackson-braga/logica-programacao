@@ -28,7 +28,7 @@ public class CalculadoraMain {
                     System.out.println("Resultado: " + resultado);
                 }
             } catch (MenuInvalidoException e) {
-                System.out.println(e.getMessage());
+                System.out.println("\nOperação inexistente!\n");
             }
         } while (menu != EMenu.SAIR);
 
@@ -79,6 +79,6 @@ public class CalculadoraMain {
             }
         }
 
-        throw new MenuInvalidoException("\nOperação inexistente!\n");
+        throw new MenuInvalidoException();
     }
 }
