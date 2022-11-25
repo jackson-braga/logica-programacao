@@ -1,5 +1,3 @@
-package Projeto;
-
 import java.util.Scanner;
 
 public class JogoDaVelha {
@@ -10,7 +8,12 @@ public class JogoDaVelha {
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
         System.out.println("Digite a quanditade de jogos desejados");
-        int jogos = scan.nextInt();//Exeption para 0 e para negativo
+
+            int jogos = scan.nextInt();
+        while(jogos<1){
+            System.out.println("O número de jogos deve ser maior que 0");
+            jogos = scan.nextInt();
+        }
         int vitoria1 = 0;
         int vitoria2 = 0;
         int empate = 0;
@@ -27,6 +30,7 @@ public class JogoDaVelha {
             //jogada do jogador 1
                 System.out.println("Digite a sua jogada jogador 1");
                 jogador=1;
+            do{
                 System.out.println("Digite a linha");
                 linha = scan.nextInt();
                 linha--;
@@ -34,9 +38,13 @@ public class JogoDaVelha {
                 coluna = scan.nextInt();
                 coluna--;
             validacao = jogada(jogador,linha,coluna);
-            if(validacao==0) {
-                System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
-            }
+                if(validacao==0) {
+                    System.out.println("Campo já preeenchido\nJogue novamente");//Verificar o erro com base na aula de quarta
+                }
+                if(validacao==1) {
+                    System.out.println("Campo inexistente\nJogue novamente");//Verificar o erro com base na aula de quarta
+                }}while(validacao!=2);
+
                 termino=resultado(partida);
                 if (termino!=0) {
                     System.out.println("\n********************************");
@@ -62,6 +70,7 @@ public class JogoDaVelha {
                 desenha();
                 System.out.println("Digite a sua jogada jogador 2");
                 jogador=2;
+                do{
                 System.out.println("Digite a linha");
                 linha = scan.nextInt();
                 linha--;
@@ -70,8 +79,11 @@ public class JogoDaVelha {
                 coluna--;
                 validacao = jogada(jogador,linha,coluna);
                 if(validacao==0) {
-                    System.out.println("Campo já preeenchido");//Verificar o erro com base na aula de quarta
+                    System.out.println("Campo já preeenchido\nJogue novamente");//Verificar o erro com base na aula de quarta
                 }
+                if(validacao==1) {
+                    System.out.println("Campo inexistente\nJogue novamente");//Verificar o erro com base na aula de quarta
+                }}while(validacao!=2);
             termino=resultado(partida);
             if (termino!=0) {
                 System.out.println("\n********************************");
@@ -136,73 +148,75 @@ public class JogoDaVelha {
     }
 
     private static int jogada(int jogador, int linha, int coluna) {
-        if(auxiliar[linha][coluna]!=0)
-            return 0;
-        if (jogador == 1){
-            velha[linha][coluna] = 'X';
-            auxiliar[linha][coluna] = 1;
+        try {
+            if (auxiliar[linha][coluna] != 0)
+                return 0;
+            if (jogador == 1) {
+                velha[linha][coluna] = 'X';
+                auxiliar[linha][coluna] = 1;
+            } else {
+                velha[linha][coluna] = 'O';
+                auxiliar[linha][coluna] = 2;
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return 1;
         }
-        else {
-            velha[linha][coluna] = 'O';
-            auxiliar[linha][coluna] = 2;
-        }
-        return 1;//Verificar o erro com base na aula de quarta
-
+        return 2;
     }
 
     private static int resultado(int partida) {
         //Verificação linha
-        if(auxiliar[0][0] == auxiliar[0][1] && auxiliar[0][1] == auxiliar[0][2]){
-            if(auxiliar[0][0] == 1)
+        if (auxiliar[0][0] == auxiliar[0][1] && auxiliar[0][1] == auxiliar[0][2]) {
+            if (auxiliar[0][0] == 1)
                 return 1;
-            if(auxiliar[0][0] == 2)
+            if (auxiliar[0][0] == 2)
                 return 2;
         }
-        if(auxiliar[1][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[1][2]) {
+        if (auxiliar[1][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[1][2]) {
             if (auxiliar[1][0] == 1)
                 return 1;
             if (auxiliar[1][0] == 2)
                 return 2;
         }
-        if(auxiliar[2][0] == auxiliar[2][1] && auxiliar[2][1] == auxiliar[2][2]){
-            if(auxiliar[2][0] == 1)
+        if (auxiliar[2][0] == auxiliar[2][1] && auxiliar[2][1] == auxiliar[2][2]) {
+            if (auxiliar[2][0] == 1)
                 return 1;
-            if(auxiliar[2][0] == 2)
+            if (auxiliar[2][0] == 2)
                 return 2;
         }
         //Verificação coluna
-        if(auxiliar[0][0] == auxiliar[1][0] && auxiliar[1][0] == auxiliar[2][0]){
-            if(auxiliar[0][0] == 1)
+        if (auxiliar[0][0] == auxiliar[1][0] && auxiliar[1][0] == auxiliar[2][0]) {
+            if (auxiliar[0][0] == 1)
                 return 1;
-            if(auxiliar[0][0] == 2)
+            if (auxiliar[0][0] == 2)
                 return 2;
         }
-        if(auxiliar[0][1] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][1]) {
+        if (auxiliar[0][1] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][1]) {
             if (auxiliar[0][1] == 1)
                 return 1;
             if (auxiliar[0][1] == 2)
                 return 2;
         }
-        if(auxiliar[0][2] == auxiliar[1][2] && auxiliar[1][2] == auxiliar[2][2]){
-            if(auxiliar[0][2] == 1)
+        if (auxiliar[0][2] == auxiliar[1][2] && auxiliar[1][2] == auxiliar[2][2]) {
+            if (auxiliar[0][2] == 1)
                 return 1;
-            if(auxiliar[0][2] == 2)
+            if (auxiliar[0][2] == 2)
                 return 2;
         }
         //Verificação diagonal
-        if(auxiliar[0][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][2]){
-            if(auxiliar[1][1] == 1)
-                return 1;
-            if(auxiliar[1][1] == 2)
-                return 2;
-        }
-        if(auxiliar[2][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[0][2]) {
+        if (auxiliar[0][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[2][2]) {
             if (auxiliar[1][1] == 1)
                 return 1;
             if (auxiliar[1][1] == 2)
                 return 2;
         }
-            //Condição de velha
+        if (auxiliar[2][0] == auxiliar[1][1] && auxiliar[1][1] == auxiliar[0][2]) {
+            if (auxiliar[1][1] == 1)
+                return 1;
+            if (auxiliar[1][1] == 2)
+                return 2;
+        }
+                //Condição de velha
     if(auxiliar[0][0]!=0&&auxiliar[0][1]!=0&&auxiliar[0][2]!=0&&auxiliar[1][0]!=0&&auxiliar[1][1]!=0&&auxiliar[1][2]!=0&&auxiliar[2][0]!=0&&auxiliar[2][1]!=0&&auxiliar[2][2]!=0)
             return 3;
 
